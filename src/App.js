@@ -1,10 +1,11 @@
 import "./App.css";
+import { Container, HomePage } from "./components/Exports/exports";
 
 function App() {
   return (
-    <div className="App">
-      <h1>App Car Rental</h1>
-    </div>
+    <Container className="App">
+      <HomePage />
+    </Container>
   );
 }
 

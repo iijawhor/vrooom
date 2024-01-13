@@ -5,7 +5,8 @@ import { store } from "../../store/appStore";
 import { authSlice, login, logout } from "../../store/authSlice";
 import AuthLayout from "../AuthLayout/AuthLayout";
 import Container from "../Container/Container";
-
+import InputComponent from "../InputComponent/InputComponent";
+import SignupComponent from "../SignupComponent/SignupComponent";
 export {
   auth,
   authService,
@@ -15,5 +16,7 @@ export {
   logout,
   AuthLayout,
   Container,
-  HomePage
+  HomePage,
+  InputComponent,
+  SignupComponent
 };

@@ -1,38 +1,24 @@
 .App {
   text-align: center;
 }
+/* // Import the functions you need from the SDKs you need
+import { initializeApp } from "firebase/app";
+import { getAnalytics } from "firebase/analytics";
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+// Your web app's Firebase configuration
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+const firebaseConfig = {
+  apiKey: "AIzaSyA6bZTpcUM7B-f96S6ZHooUqp_ilugz_ns",
+  authDomain: "vrooom-d9dcf.firebaseapp.com",
+  projectId: "vrooom-d9dcf",
+  storageBucket: "vrooom-d9dcf.appspot.com",
+  messagingSenderId: "465129121835",
+  appId: "1:465129121835:web:1ea7e1f2dc0259efe8a26e",
+  measurementId: "G-2T8CP3HDCV"
+};
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const analytics = getAnalytics(app); */

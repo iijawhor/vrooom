@@ -1,21 +1,23 @@
 import React, { forwardRef } from "react";
-
+import "./InputComponent.css";
 const InputComponent = forwardRef(function InputComponent(
-  value,
-  onClick,
-  className,
-  ref,
-  ...props
+  { value, onClick, className, onChange, label, ...props },
+  ref
 ) {
   return (
     <div className="inputComponent">
+      {label && (
+        <label htmlFor="" className="inputComponentLabel">
+          {label}
+        </label>
+      )}
       <input
+        className={`inputComponentInputFiled ${className}`}
         type="text"
         ref={ref}
-        onClick={onClick}
+        onChange={onChange}
         value={value}
         {...props}
-        className={`inputComponentInputFiled ${className}`}
       />
     </div>
   );

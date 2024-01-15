@@ -5,8 +5,12 @@ import App from "./App";
 import { Provider } from "react-redux";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { store } from "./store/appStore";
-import { HomePage, SignupComponent } from "./components/Exports/exports";
-import { AuthLayout } from "./components/Exports/exports";
+import {
+  HomePage,
+  LoginComponent,
+  SignupComponent,
+  AuthLayout
+} from "./components/Exports/exports";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 const router = createBrowserRouter([
   {
@@ -19,6 +23,14 @@ const router = createBrowserRouter([
     element: (
       <AuthLayout authentication={false}>
         <SignupComponent />
+      </AuthLayout>
+    )
+  },
+  {
+    path: "/login-page",
+    element: (
+      <AuthLayout authentication={false}>
+        <LoginComponent />
       </AuthLayout>
     )
   }

@@ -4,7 +4,6 @@ import {
   signInWithEmailAndPassword,
   signOut
 } from "firebase/auth";
-import { login } from "../components/Exports/exports";
 import { auth } from "../components/Exports/exports";
 export class FirebaseAuthentication {
   async createUser({ email, password }) {
@@ -15,8 +14,8 @@ export class FirebaseAuthentication {
         password
       );
       if (userAccount) {
-        return userAccount;
-        login({ email, password });
+        // return userAccount;
+        this.login({ email, password });
       }
     } catch (error) {
       console.log("Error in create user method ", error);

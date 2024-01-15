@@ -16,6 +16,7 @@ function HomePage() {
   return (
     <Container className="homePage">
       <h1>User Logged In</h1>
+      {user.email}
     </Container>
   );
 }

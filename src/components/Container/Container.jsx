@@ -6,7 +6,6 @@ function Container({ children, className }) {
       className={`container ${className}`}
       style={{
         width: "100%",
-        border: "1px solid red",
         height: "100vh",
         padding: 0
       }}

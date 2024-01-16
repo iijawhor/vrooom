@@ -12,6 +12,7 @@ h5,
 h6,
 a,
 Link,
+li,
 button {
   border: none;
   outline: none;
@@ -20,4 +21,5 @@ button {
   color: initial;
   background-color: none;
   background: none;
+  list-style: none;
 }

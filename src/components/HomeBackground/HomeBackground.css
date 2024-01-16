@@ -1,0 +1,41 @@
+.homeBackground {
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+.homeBackgroundImage {
+  width: 100%;
+  transform-origin: center;
+  height: 320px;
+  position: relative;
+  opacity: 1;
+  background-position: center;
+}
+.homeBackgroundDetails {
+  position: absolute;
+  width: fit-content;
+  top: 50%;
+  left: 27%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+.homeBackgroundDetails > h2 {
+  color: white !important;
+  font-size: 3.5vw;
+  font-family: sans-serif;
+  font-weight: 600;
+  text-align: start;
+}
+@media screen and (max-width: 900px) {
+  .homeBackgroundImage {
+    height: 180px;
+  }
+  .homeBackgroundDetails {
+    /* position: relative; */
+    top: 80%;
+    left: 30%;
+  }
+  .homeBackgroundDetails > h2 {
+    font-size: 4vh;
+  }
+}

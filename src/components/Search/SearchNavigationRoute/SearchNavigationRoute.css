@@ -1,0 +1,35 @@
+.searchComponentNavigation {
+  width: fit-content;
+  position: relative;
+  /* width: 30%; */
+  background-color: white;
+}
+
+.searchComponentNavigationItems {
+  display: flex;
+  justify-content: space-around;
+  gap: 40px;
+  margin: 0;
+  padding: 15px 30px;
+}
+
+.searchComponentNavigationItem {
+  color: #333; /* Adjusted text color */
+  padding: 0;
+  margin: 0;
+}
+
+.searchComponentNavigationItem > Link > button {
+  color: #333; /* Adjusted text color */
+  padding: 0;
+  margin: 0;
+  font-size: 16px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  cursor: pointer;
+}
+@media screen and (max-width: 900px) {
+  .searchComponentNavigation {
+    background-color: #e4e4e4;
+    width: 100%;
+  }
+}

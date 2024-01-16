@@ -1,0 +1,45 @@
+.searchForm {
+  display: flex;
+  position: relative;
+  gap: 20px;
+}
+.searchComponentInputs {
+  position: relative;
+  gap: 20px;
+  width: 100%;
+  display: flex;
+  flex: 3;
+}
+.searchComponentInputBox {
+  position: relative;
+  display: flex;
+  gap: 20px;
+  flex: 1;
+  border: 1px solid rgb(167, 167, 167);
+  padding: 10px;
+  align-items: center;
+}
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+.currentLocationDot {
+  background-color: rgb(38, 158, 38);
+}
+.destinationDot {
+  background-color: rgb(172, 128, 45);
+}
+.searchInput {
+  width: 100%;
+  padding: 12px 0;
+  border: none;
+}
+.searchCabs {
+  flex: 1;
+  font-size: 16px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background-color: black;
+  cursor: pointer;
+  color: white;
+}

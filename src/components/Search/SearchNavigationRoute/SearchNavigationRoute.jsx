@@ -12,8 +12,10 @@ function SearchNavigationRoute() {
       <ul className="searchComponentNavigationItems">
         {searchNavigation.map((searchRoute) => (
           <li key={searchRoute.id} className="searchComponentNavigationItem">
-            <Link to={searchRoute.item}>
-              <button>{searchRoute.name}</button>
+            <Link to={searchRoute.slug}>
+              <button className="searchNavigationRouteButton">
+                {searchRoute.name}
+              </button>
             </Link>
           </li>
         ))}

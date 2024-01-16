@@ -38,8 +38,11 @@
 .searchCabs {
   flex: 1;
   font-size: 16px;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  letter-spacing: 1px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   background-color: black;
   cursor: pointer;
-  color: white;
+  text-transform: uppercase;
+  color: rgb(101, 246, 101);
+  padding: 0 20px;
 }

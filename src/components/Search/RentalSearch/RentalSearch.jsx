@@ -3,7 +3,10 @@ import { SearchForm, Container } from "../../Exports/exports";
 function RentalSearch() {
   return (
     <Container>
-      <SearchForm placeholder="Select Package" />
+      <SearchForm
+        placeholder="Select Package"
+        buttonTitle="Search Rental Cabs"
+      />
     </Container>
   );
 }

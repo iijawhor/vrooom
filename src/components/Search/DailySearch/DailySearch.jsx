@@ -3,7 +3,10 @@ import { Container, SearchForm } from "../../Exports/exports";
 function DailySearch() {
   return (
     <Container>
-      <SearchForm placeholder="Enter Destination" />
+      <SearchForm
+        placeholder="Enter Destination"
+        buttonTitle="Search Vroom Cabs"
+      />
     </Container>
   );
 }

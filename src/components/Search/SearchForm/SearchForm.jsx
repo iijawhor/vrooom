@@ -5,9 +5,8 @@ import {
   LocationSearchingIcon,
   InputComponent
 } from "../../Exports/exports";
-import { grey } from "@mui/material/colors";
 
-const SearchForm = forwardRef(({ placeholder, ...props }, ref) => {
+const SearchForm = forwardRef(({ placeholder, buttonTitle }, ref) => {
   const [currentLocation, setCurrentLocation] = useState("");
   const [enterDestination, setEnterDestination] = useState("");
   const [searchInput, setSearchInput] = useState("");
@@ -23,7 +22,7 @@ const SearchForm = forwardRef(({ placeholder, ...props }, ref) => {
       <form action="" className="searchForm" ref={ref}>
         <div className="searchComponentInputs">
           <div className="searchComponentInputBox">
-            <div className=" dot" />
+            <div className="currentLocationDot dot" />
             <InputComponent
               placeholder="Current Location"
               onClick={handleSearch}
@@ -49,7 +48,7 @@ const SearchForm = forwardRef(({ placeholder, ...props }, ref) => {
         </div>
         {/* <div className="searchComponentInputs"> */}
         <button onClick={handleSearch} className="searchCabs">
-          Search Cabs
+          {buttonTitle}
         </button>
       </form>
     </>

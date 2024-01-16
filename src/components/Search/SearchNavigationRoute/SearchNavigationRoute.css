@@ -1,10 +1,8 @@
 .searchComponentNavigation {
   width: fit-content;
   position: relative;
-  /* width: 30%; */
   background-color: white;
 }
-
 .searchComponentNavigationItems {
   display: flex;
   justify-content: space-around;
@@ -12,15 +10,14 @@
   margin: 0;
   padding: 15px 30px;
 }
-
 .searchComponentNavigationItem {
-  color: #333; /* Adjusted text color */
+  color: #333;
   padding: 0;
   margin: 0;
 }
 
-.searchComponentNavigationItem > Link > button {
-  color: #333; /* Adjusted text color */
+.searchNavigationRouteButton {
+  color: #333;
   padding: 0;
   margin: 0;
   font-size: 16px;

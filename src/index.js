@@ -9,14 +9,23 @@ import {
   HomePage,
   LoginComponent,
   SignupComponent,
-  AuthLayout
+  AuthLayout,
+  SearchCompoenent,
+  DailySearch,
+  OutstationSearch
 } from "./components/Exports/exports";
+import RentalSearch from "./components/Search/RentalSearch/RentalSearch";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
-    children: [{ path: "/", element: <HomePage /> }]
+    children: [
+      { path: "/", element: <HomePage /> },
+      { path: "/daily-search", element: <DailySearch /> },
+      { path: "/rental-search", element: <RentalSearch /> },
+      { path: "/outstation-search", element: <OutstationSearch /> }
+    ]
   },
   {
     path: "/signup-page",

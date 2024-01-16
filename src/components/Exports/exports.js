@@ -13,7 +13,14 @@ import LoginComponent from "../LoginComponent/LoginComponent";
 import HomeBackground from "../HomeBackground/HomeBackground";
 import SearchAndInfo from "../SearchAndInfo/SearchAndInfo";
 import HomeComponent from "../HomeCompnent/HomeComponent";
-import SearchComponent from "../SearchComponent/SearchComponent";
+import SearchNavigationRoute from "../Search/SearchNavigationRoute/SearchNavigationRoute";
+import carBookings from "../Data/Data";
+import LocationSearchingIcon from "@mui/icons-material/LocationSearching";
+import SearchForm from "../Search/SearchForm/SearchForm";
+import SearchCompoenent from "../SearchComponent/SearchCompoenent";
+import DailySearch from "../Search/DailySearch/DailySearch";
+import RentaSearch from "../Search/RentalSearch/RentalSearch";
+import OutstationSearch from "../Search/OutstationSearch/OutstationSearch";
 export {
   auth,
   authService,
@@ -30,5 +37,12 @@ export {
   HomeComponent,
   HomeBackground,
   SearchAndInfo,
-  SearchComponent
+  carBookings,
+  SearchNavigationRoute,
+  LocationSearchingIcon,
+  SearchForm,
+  SearchCompoenent,
+  DailySearch,
+  RentaSearch,
+  OutstationSearch
 };

@@ -1,6 +1,11 @@
 import React, { useEffect, useState } from "react";
-import { Container } from "../../components/Exports/exports";
-import { authService } from "../../components/Exports/exports";
+
+import {
+  Container,
+  HomeComponent,
+  authService
+} from "../../components/Exports/exports";
+
 function HomePage() {
   const [user, setUser] = useState();
   useEffect(() => {
@@ -11,12 +16,15 @@ function HomePage() {
     });
   }, []);
   if (!user) {
-    return <h1>Please Login to Proceed</h1>;
+    return (
+      <div>
+        <h1>Please Login to Proceed</h1>
+      </div>
+    );
   }
   return (
     <Container className="homePage">
-      <h1>User Logged In</h1>
-      {user.email}
+      <HomeComponent />
     </Container>
   );
 }

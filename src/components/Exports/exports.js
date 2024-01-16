@@ -19,7 +19,7 @@ import LocationSearchingIcon from "@mui/icons-material/LocationSearching";
 import SearchForm from "../Search/SearchForm/SearchForm";
 import SearchCompoenent from "../SearchComponent/SearchCompoenent";
 import DailySearch from "../Search/DailySearch/DailySearch";
-import RentaSearch from "../Search/RentalSearch/RentalSearch";
+import RentalSearch from "../Search/RentalSearch/RentalSearch";
 import OutstationSearch from "../Search/OutstationSearch/OutstationSearch";
 export {
   auth,
@@ -43,6 +43,6 @@ export {
   SearchForm,
   SearchCompoenent,
   DailySearch,
-  RentaSearch,
+  RentalSearch,
   OutstationSearch
 };

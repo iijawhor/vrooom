@@ -10,6 +10,10 @@ import Container from "../Container/Container";
 import InputComponent from "../InputComponent/InputComponent";
 import SignupComponent from "../SignupComponent/SignupComponent";
 import LoginComponent from "../LoginComponent/LoginComponent";
+import HomeBackground from "../HomeBackground/HomeBackground";
+import SearchAndInfo from "../SearchAndInfo/SearchAndInfo";
+import HomeComponent from "../HomeCompnent/HomeComponent";
+import SearchComponent from "../SearchComponent/SearchComponent";
 export {
   auth,
   authService,
@@ -22,5 +26,9 @@ export {
   HomePage,
   InputComponent,
   SignupComponent,
-  LoginComponent
+  LoginComponent,
+  HomeComponent,
+  HomeBackground,
+  SearchAndInfo,
+  SearchComponent
 };

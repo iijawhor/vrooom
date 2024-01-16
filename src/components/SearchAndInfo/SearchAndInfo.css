@@ -1,0 +1,6 @@
+.searchAndInfo {
+  position: relative;
+  z-index: 2;
+  /* padding: 5px; */
+  border: 1px solid black;
+}

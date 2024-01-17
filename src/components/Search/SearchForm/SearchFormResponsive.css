@@ -1,0 +1,22 @@
+@media screen and (max-width: 920px) {
+  .searchForm {
+    width: 100%;
+    flex-direction: column;
+    gap: 5px;
+  }
+  .searchInputLine {
+    display: block;
+  }
+  .searchComponentInputBox {
+    border: none;
+    padding: 2px 5px;
+  }
+  .searchComponentInputs {
+    width: 100%;
+    gap: 3px;
+    flex-direction: column;
+  }
+  .searchCabs {
+    margin-top: 10px;
+  }
+}

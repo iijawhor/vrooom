@@ -16,15 +16,16 @@ import {
 } from "./components/Exports/exports";
 import RentalSearch from "./components/Search/RentalSearch/RentalSearch";
 const root = ReactDOM.createRoot(document.getElementById("root"));
+const createDailySearchElement = () => <DailySearch />;
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
     children: [
-      { path: "/", element: <HomePage /> },
-      { path: "/daily-search", element: <DailySearch /> },
-      { path: "/rental-search", element: <RentalSearch /> },
-      { path: "/outstation-search", element: <OutstationSearch /> }
+      { path: "/", element: createDailySearchElement() },
+      { path: "search/daily-search", element: createDailySearchElement() },
+      { path: "search/rental-search", element: <RentalSearch /> },
+      { path: "search/outstation-search", element: <OutstationSearch /> }
     ]
   },
   {

@@ -35,6 +35,11 @@
   padding: 12px 0;
   border: none;
 }
+.searchInputLine {
+  border: 1px solid gainsboro;
+  margin: 5px 0;
+  display: none;
+}
 .searchCabs {
   flex: 1;
   font-size: 16px;
@@ -44,5 +49,5 @@
   cursor: pointer;
   text-transform: uppercase;
   color: rgb(101, 246, 101);
-  padding: 0 20px;
+  padding: 20px;
 }

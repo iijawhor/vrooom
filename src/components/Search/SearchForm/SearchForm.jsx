@@ -1,10 +1,7 @@
 import React, { useState, forwardRef } from "react";
 import "./SearchForm.css";
-import {
-  Container,
-  LocationSearchingIcon,
-  InputComponent
-} from "../../Exports/exports";
+import "./SearchFormResponsive.css";
+import { LocationSearchingIcon, InputComponent } from "../../Exports/exports";
 
 const SearchForm = forwardRef(({ placeholder, buttonTitle }, ref) => {
   const [currentLocation, setCurrentLocation] = useState("");
@@ -14,7 +11,6 @@ const SearchForm = forwardRef(({ placeholder, buttonTitle }, ref) => {
   const handleSearch = (e) => {
     e.preventDefault();
     console.log("Search Button Clicked");
-    // Perform any search logic if needed
   };
 
   return (
@@ -35,7 +31,7 @@ const SearchForm = forwardRef(({ placeholder, buttonTitle }, ref) => {
               style={{ color: "grey", fontSize: "18px" }}
             />
           </div>
-          {/* <hr className="searchInputLine" /> */}
+          <hr className="searchInputLine" />
           <div className="searchComponentInputBox">
             <div className="destinationDot dot" />
             <InputComponent

@@ -1,10 +1,7 @@
 import React from "react";
 import "./SearchCompoenent.css";
-import {
-  Container,
-  DailySearch,
-  SearchNavigationRoute
-} from "../Exports/exports";
+import "./SearchCompoenentResponsive.css";
+import { Container, SearchNavigationRoute } from "../Exports/exports";
 import { Outlet } from "react-router-dom";
 function SearchCompoenent() {
   return (

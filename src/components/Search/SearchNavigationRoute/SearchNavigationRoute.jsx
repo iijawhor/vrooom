@@ -3,9 +3,9 @@ import "./SearchNavigationRoute.css";
 import { Link } from "react-router-dom";
 function SearchNavigationRoute() {
   const searchNavigation = [
-    { name: "Daily", slug: "/daily-search", id: 1 },
-    { name: "Rental", slug: "/rental-search", id: 3 },
-    { name: "Outstation", slug: "/outstation-search", id: 3 }
+    { name: "Daily", slug: "/search/daily-search", id: 1 },
+    { name: "Rental", slug: "/search/rental-search", id: 2 },
+    { name: "Outstation", slug: "/search/outstation-search", id: 3 }
   ];
   return (
     <div className="searchComponentNavigation">
@@ -21,7 +21,6 @@ function SearchNavigationRoute() {
         ))}
       </ul>
     </div>
-    /*   <div className="searchComponentNavigation"> */
   );
 }
 

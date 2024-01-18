@@ -2,3 +2,17 @@
   position: relative;
   z-index: 2;
 }
+.searchInfoContainer {
+  padding-top: 100px;
+  position: relative;
+}
+@media screen and (max-width: 920px) {
+  .searchInfoContainer {
+    padding: 0;
+    width: 100%;
+    text-align: start;
+  }
+  .xyz {
+    padding: 20px;
+  }
+}

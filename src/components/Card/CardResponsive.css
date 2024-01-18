@@ -1,0 +1,9 @@
+@media screen and (max-width: 920px) {
+  .cardDescription {
+    width: 100%;
+    text-align: start;
+  }
+  .cardDetails {
+    text-align: start;
+  }
+}

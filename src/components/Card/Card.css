@@ -1,0 +1,41 @@
+.card {
+  width: fit-content;
+  position: relative;
+  text-align: center;
+}
+.cardDetails {
+  position: relative;
+  gap: 5px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-align: center;
+  margin-top: 2px;
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: fit-content;
+}
+.cardImage {
+  width: 100%;
+  height: 220px;
+}
+.cardTitle,
+.cardDescription,
+.cardCities {
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 1px;
+  min-width: 100%;
+}
+.cardCities,
+.cardTitle {
+  font-weight: 600;
+  font-size: 2vh;
+}
+.cardDescription {
+  width: 70%;
+  margin: 0;
+  font-size: 2vh;
+  text-align: center;
+  color: gray;
+}

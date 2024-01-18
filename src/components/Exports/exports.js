@@ -21,6 +21,8 @@ import SearchCompoenent from "../SearchComponent/SearchCompoenent";
 import DailySearch from "../Search/DailySearch/DailySearch";
 import RentalSearch from "../Search/RentalSearch/RentalSearch";
 import OutstationSearch from "../Search/OutstationSearch/OutstationSearch";
+import GlobalConnectCities from "../GlobaConnect Cities/GlobalConnectCities";
+import Card from "../Card/Card";
 export {
   auth,
   authService,
@@ -44,5 +46,7 @@ export {
   SearchCompoenent,
   DailySearch,
   RentalSearch,
-  OutstationSearch
+  OutstationSearch,
+  GlobalConnectCities,
+  Card
 };

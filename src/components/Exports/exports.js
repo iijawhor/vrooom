@@ -23,6 +23,7 @@ import RentalSearch from "../Search/RentalSearch/RentalSearch";
 import OutstationSearch from "../Search/OutstationSearch/OutstationSearch";
 import GlobalConnectCities from "../GlobaConnect Cities/GlobalConnectCities";
 import Card from "../Card/Card";
+import UseDebounce from "../Debounce/UseDebounce";
 export {
   auth,
   authService,
@@ -48,5 +49,6 @@ export {
   RentalSearch,
   OutstationSearch,
   GlobalConnectCities,
-  Card
+  Card,
+  UseDebounce
 };

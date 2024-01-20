@@ -6,13 +6,12 @@ import { Provider } from "react-redux";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { store } from "./store/appStore";
 import {
-  HomePage,
   LoginComponent,
   SignupComponent,
   AuthLayout,
-  SearchCompoenent,
   DailySearch,
-  OutstationSearch
+  OutstationSearch,
+  SearchResultPage
 } from "./components/Exports/exports";
 import RentalSearch from "./components/Search/RentalSearch/RentalSearch";
 const root = ReactDOM.createRoot(document.getElementById("root"));
@@ -41,6 +40,14 @@ const router = createBrowserRouter([
     element: (
       <AuthLayout authentication={false}>
         <LoginComponent />
+      </AuthLayout>
+    )
+  },
+  {
+    path: "/search-page",
+    element: (
+      <AuthLayout authentication={true}>
+        <SearchResultPage />
       </AuthLayout>
     )
   }

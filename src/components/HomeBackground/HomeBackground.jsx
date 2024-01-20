@@ -3,7 +3,6 @@ import "./HomeBackground.css";
 import { Container } from "../Exports/exports";
 
 function HomeBackground() {
-  console.log("Rendering HomeBackground Component...");
   return (
     <Container>
       <div className="homeBackground">

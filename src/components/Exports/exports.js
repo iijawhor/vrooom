@@ -24,6 +24,7 @@ import OutstationSearch from "../Search/OutstationSearch/OutstationSearch";
 import GlobalConnectCities from "../GlobaConnect Cities/GlobalConnectCities";
 import Card from "../Card/Card";
 import UseDebounce from "../Debounce/UseDebounce";
+import searchSlice from "../../store/searchSlice";
 export {
   auth,
   authService,
@@ -50,5 +51,6 @@ export {
   OutstationSearch,
   GlobalConnectCities,
   Card,
-  UseDebounce
+  UseDebounce,
+  searchSlice
 };

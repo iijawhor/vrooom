@@ -8,7 +8,7 @@ function HomeBackground() {
       <div className="homeBackground">
         <img
           className="homeBackgroundImage"
-          src="https://img.freepik.com/premium-photo/taxi-is-parked-dark-street-night_859451-3089.jpg?size=626&ext=jpg&ga=GA1.1.1546980028.1699833600&semt=ais"
+          src="https://c0.wallpaperflare.com/preview/582/785/252/4k-wallpaper-action-asphalt-automobile.jpg"
           alt="Background Image"
         />
         <div className="homeBackgroundDetails">

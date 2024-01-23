@@ -1,6 +1,7 @@
 body {
   margin: 0;
   padding: 0;
+  scroll-behavior: smooth;
 }
 input,
 h1,
@@ -21,4 +22,7 @@ button {
   background-color: none;
   background: none;
   list-style: none;
+}
+::-webkit-scrollbar {
+  display: none;
 }

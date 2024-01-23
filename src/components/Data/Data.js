@@ -166,3 +166,23 @@ const carBookings = [
   }
 ];
 export default carBookings;
+const footerData = {
+  cabDetails: {
+    categories: [
+      "Book a cab",
+      "Drive with us",
+      "Outstation",
+      "Rental",
+      "Ola Money",
+      "Corporate"
+    ]
+  },
+  companyDetails: {
+    categories: ["About Us", "Contact Us", "Support", "Careers", "Media Centre"]
+  },
+  futureDetails: {
+    categories: ["Ola S1", "Futurefactory", "Electric", "Investor Relations"]
+  }
+};
+
+export { footerData, carBookings };

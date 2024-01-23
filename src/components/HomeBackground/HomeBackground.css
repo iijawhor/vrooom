@@ -5,10 +5,13 @@
 }
 .homeBackgroundImage {
   width: 100%;
-  transform-origin: center;
-  height: 320px;
+
+  height: 50vh;
+  overflow: hidden;
+  object-fit: cover;
   position: relative;
-  opacity: 1;
+  background-size: cover;
+  margin: 0 auto;
   background-position: center;
 }
 .homeBackgroundDetails {

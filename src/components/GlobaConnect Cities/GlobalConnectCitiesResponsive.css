@@ -15,12 +15,13 @@
   }
   .globalCitiesCardContainer {
     flex-direction: column;
+    width: 100%;
   }
   .globaConnectCitiesCard {
-    /* padding: 10px; */
     display: flex;
     gap: 10px;
     align-items: center;
+    width: 100%;
   }
   .globaConnectCitiesCardResponsive {
   }

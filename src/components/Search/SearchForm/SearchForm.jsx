@@ -9,12 +9,18 @@ import {
   carBookings,
   UseDebounce
 } from "../../Exports/exports";
-import { searchData } from "../../../store/searchSlice";
+import {
+  searchData,
+  pickupLocation,
+  dropLocation
+} from "../../../store/searchSlice";
+import { useNavigate } from "react-router-dom";
 const SearchForm = forwardRef(({ placeholder, buttonTitle }, ref) => {
   const [currentLocation, setCurrentLocation] = useState("");
   const [enterDestination, setEnterDestination] = useState("");
   const [searchDatas, setSearchDatas] = useState([]);
   const dispatch = useDispatch();
+  const navigate = useNavigate();
   const debounce = UseDebounce({ currentLocation, enterDestination }, 200);
   const filter = useMemo(() => {
     return carBookings.filter((data) => {
@@ -38,18 +44,18 @@ const SearchForm = forwardRef(({ placeholder, buttonTitle }, ref) => {
 
   const handleSearch = (e) => {
     e.preventDefault();
+
     if (!currentLocation && !enterDestination) {
       alert("Please enter something");
       return;
-    } else if (
-      (!currentLocation && enterDestination) ||
-      (currentLocation && !enterDestination)
-    ) {
-      alert("Please enter query");
+    } else if (!currentLocation || !enterDestination) {
+      alert("Please enter both current location and destination");
       return;
     }
-    setSearchDatas(filter);
     dispatch(searchData(filter));
+    dispatch(pickupLocation(currentLocation));
+    dispatch(dropLocation(enterDestination));
+    navigate("/search-page");
   };
 
   return (

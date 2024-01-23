@@ -6,7 +6,8 @@ import {
   Container,
   FeaturesDisplay,
   AskedQuestion,
-  FooterComponent
+  FooterComponent,
+  HowItWorks
 } from "../../components/Exports/exports";
 function HomeComponent() {
   return (
@@ -14,6 +15,7 @@ function HomeComponent() {
       <HomeBackground />
       <SearchAndInfo />
       <FeaturesDisplay />
+      <HowItWorks />
       <AskedQuestion />
       <FooterComponent />
     </Container>

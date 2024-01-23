@@ -1,0 +1,86 @@
+.footerComponent {
+  position: relative;
+}
+ul > li {
+  color: white;
+}
+.footer {
+  clip-path: polygon(0 11%, 100% 0%, 100% 100%, 0 100%);
+  background-color: aquamarine;
+  height: 50vh;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  gap: 50px;
+}
+.footerItemsLogo {
+  width: 350px;
+  display: flex;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.footerItemsLogo > h1 {
+  font-size: 30px;
+  color: white;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  letter-spacing: 1px;
+  color: rgb(9, 234, 9);
+}
+.footerItemsLogo > .footerSocial > ul {
+  display: flex;
+  position: relative;
+  gap: 30px;
+}
+.footerItems {
+  padding: 10px;
+  height: 250px;
+}
+.footerItems > ul {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  padding: 20px;
+  gap: 20px;
+}
+.footerItems > ul > .footerItem {
+  font-family: sans-serif;
+  font-size: 15px;
+  letter-spacing: 0.3px;
+}
+
+.footerItemsNewsLetter {
+  color: white;
+  width: 330px;
+  display: flex;
+  flex-direction: column;
+}
+.footerItemNewsletterInput {
+  border: 1px solid rgb(38, 158, 38);
+  padding: 10px 10px;
+  width: 90%;
+  border-radius: 5px;
+}
+.footerItemsNewsLetter > p {
+  color: white;
+  font-family: 16px;
+  margin-bottom: 10px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+.footerSubscribeButton {
+  font-size: 18px;
+  letter-spacing: 0.3px;
+  margin-top: 10px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  color: white;
+  border: 1px solid rgb(38, 158, 38);
+  background-color: rgb(38, 158, 38);
+  width: 100%;
+  padding: 10px;
+  cursor: pointer;
+}

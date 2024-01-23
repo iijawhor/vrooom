@@ -25,7 +25,28 @@ import GlobalConnectCities from "../GlobaConnect Cities/GlobalConnectCities";
 import Card from "../Card/Card";
 import UseDebounce from "../Debounce/UseDebounce";
 import searchSlice from "../../store/searchSlice";
+import SearchResultPage from "../../pages/SearchResultPage/SearchResultPage";
+import SearchResultComponent from "../SearchResultComponent/SearchResultComponent";
+import FeaturesDisplay from "../FeaturesDisplay/FeaturesDisplay";
+import FeatureDisplayCard from "../FeaturesDisplay/FeatureDisplayCard/FeatureDisplayCard";
+import AskedQuestion from "../AskedQuestion/AskedQuestion";
+import QuestionComponent from "../AskedQuestion/QuestionComponent/QuestionComponent";
+import FooterComponent from "../FooterComponent/FooterComponent";
+import { footerData } from "../Data/Data";
+import FooterItems from "../FooterComponent/FooterItem/FooterItems";
+import AddIcon from "@mui/icons-material/Add";
+import RemoveIcon from "@mui/icons-material/Remove";
+import XIcon from "@mui/icons-material/X";
+// import TwitterIcon from "@mui/icons-matersial/Twitter";
+import InstagramIcon from "@mui/icons-material/Instagram";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
 export {
+  AddIcon,
+  RemoveIcon,
+  XIcon,
+  // TwitterIcon,
+  LinkedInIcon,
+  InstagramIcon,
   auth,
   authService,
   store,
@@ -52,5 +73,14 @@ export {
   GlobalConnectCities,
   Card,
   UseDebounce,
-  searchSlice
+  searchSlice,
+  SearchResultPage,
+  SearchResultComponent,
+  FeaturesDisplay,
+  FeatureDisplayCard,
+  AskedQuestion,
+  QuestionComponent,
+  FooterComponent,
+  footerData,
+  FooterItems
 };

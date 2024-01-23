@@ -1,15 +1,19 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-  searchQuery: "",
+  pickupLocation: "",
+  dropLocation: "",
   searchResult: []
 };
 export const searchSlice = createSlice({
   name: "search",
   initialState,
   reducers: {
-    searchQuery: (state, action) => {
-      state.searchQuery = action.payload;
+    pickupLocation: (state, action) => {
+      state.pickupLocation = action.payload;
+    },
+    dropLocation: (state, action) => {
+      state.dropLocation = action.payload;
     },
     searchData: (state, action) => {
       state.searchResult = action.payload;
@@ -23,5 +27,5 @@ export const searchSlice = createSlice({
   },
   prepareAction: (payload) => ({ payload })
 });
-export const { searchQuery, searchData } = searchSlice.actions;
+export const { pickupLocation, dropLocation, searchData } = searchSlice.actions;
 export default searchSlice.reducer;

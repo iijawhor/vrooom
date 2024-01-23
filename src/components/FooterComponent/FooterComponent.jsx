@@ -11,7 +11,7 @@ function FooterComponent() {
   return (
     <Container className="footerComponent">
       <footer className="footer">
-        <div className="footerItemsLogo">
+        <div className="footerItemsLogo footerItems">
           <h1>Vrooom</h1>
           <div className="footerSocial">
             <ul>

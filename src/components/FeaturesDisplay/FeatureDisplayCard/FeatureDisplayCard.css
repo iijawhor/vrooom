@@ -1,0 +1,104 @@
+.featureDisplayCardContainer {
+  padding: 20px;
+  display: flex;
+  position: relative;
+  gap: 10px;
+  width: 70%;
+  margin: auto;
+  align-items: center;
+}
+h1,
+features > p {
+  margin: 0;
+  padding: 0;
+}
+
+.featureDisplayCardImageBox {
+  padding: 10px;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  position: relative;
+  background-color: rgb(247, 251, 254);
+  height: 600px;
+}
+.featureDisplayCardImageBoxImage {
+  width: 70%;
+  height: 500px;
+  margin: auto;
+  background-position: center;
+  object-fit: cover;
+  border-radius: 10px;
+}
+.featureDisplayCardDetails {
+  flex: 1;
+  padding: 10px;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  gap: 30px;
+  margin-left: 40px;
+}
+.features {
+  position: relative;
+}
+.featureDisplayCardDetails > .features > h1,
+p {
+  font-size: 20px;
+  color: black;
+  font-weight: 550;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  letter-spacing: 0.4px;
+}
+.featureDisplayCardDetails > .features > p {
+  font-size: 16px;
+  color: black;
+  width: 80%;
+  font-weight: 400;
+}
+
+.featuresLine {
+  /* border: 1px solid rgb(169, 169, 169); */
+  width: 95px;
+  height: 2px;
+  position: absolute;
+  left: -70px;
+  top: 35px;
+  margin: 10px;
+  rotate: 90deg;
+  margin-right: 10px;
+  background: rgb(47, 183, 47);
+  border-radius: 5px;
+}
+@media screen and (max-width: 920px) {
+  .featureDisplayCardContainer {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 520px) {
+  .featureDisplayCardContainer {
+    width: 100%;
+    flex-direction: column;
+    padding: 0;
+  }
+  .featureDisplayCardDetails > .features > p {
+    width: 100%;
+  }
+  .featureDisplayCardImageBox {
+    width: 80%;
+    padding: 20px 0;
+  }
+  .featureDisplayCardImageBoxImage {
+    width: 70%;
+    height: 250px;
+    margin: auto;
+    background-position: center;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+  .featureDisplayCardDetails {
+    margin-left: 20px;
+  }
+}

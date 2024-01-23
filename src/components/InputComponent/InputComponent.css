@@ -16,7 +16,9 @@
   width: 100%;
   padding: 7px 5px;
   border-radius: 5px;
-  color: white;
+  color: initial;
+  letter-spacing: 0.3px;
+  font-size: 16px;
 }
 ::placeholder {
   padding-left: 5px;

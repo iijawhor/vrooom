@@ -40,6 +40,8 @@ import XIcon from "@mui/icons-material/X";
 // import TwitterIcon from "@mui/icons-matersial/Twitter";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import HowItWorks from "../HowItWorks/HowItWorks";
+import HowItWorksCard from "../HowItWorks/HowItWorksCard/HowItWorksCard";
 export {
   AddIcon,
   RemoveIcon,
@@ -82,5 +84,7 @@ export {
   QuestionComponent,
   FooterComponent,
   footerData,
-  FooterItems
+  FooterItems,
+  HowItWorks,
+  HowItWorksCard
 };

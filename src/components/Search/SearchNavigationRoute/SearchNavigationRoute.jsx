@@ -1,14 +1,14 @@
 import React from "react";
 import "./SearchNavigationRoute.css";
 import { Link } from "react-router-dom";
-function SearchNavigationRoute() {
+function SearchNavigationRoute({ className }) {
   const searchNavigation = [
     { name: "Daily", slug: "/search/daily-search", id: 1 },
     { name: "Rental", slug: "/search/rental-search", id: 2 },
     { name: "Outstation", slug: "/search/outstation-search", id: 3 }
   ];
   return (
-    <div className="searchComponentNavigation">
+    <div className={`searchComponentNavigation ${className}`}>
       <ul className="searchComponentNavigationItems">
         {searchNavigation.map((searchRoute) => (
           <li key={searchRoute.id} className="searchComponentNavigationItem">

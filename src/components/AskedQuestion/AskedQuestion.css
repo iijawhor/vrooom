@@ -1,0 +1,35 @@
+.askedQuestionContainer {
+  position: relative;
+  padding: 30px 0;
+  text-align: center;
+  margin: auto;
+}
+.askedQuestion {
+  position: relative;
+  width: 70%;
+  background-color: #0b1974;
+  border: 1px solid rgb(35, 37, 35);
+  margin: auto;
+  padding: 50px;
+  border-radius: 20px;
+}
+.askedQuestionTitle {
+  color: white;
+  margin-bottom: 22px;
+  letter-spacing: 0.4px;
+  margin-bottom: 50px;
+  font-weight: bolder;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 20px;
+}
+/* #001942; black */
+@media screen and (max-width: 920px) {
+  .askedQuestion {
+    width: 90%;
+    padding: 30px 0;
+  }
+  .askedQuestionTitle {
+    margin-bottom: 20px;
+    font-size: 18px;
+  }
+}

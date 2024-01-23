@@ -17,7 +17,6 @@ function Card({
       <div className={`cardDetails ${globaConnectCitiesCardDetails}`}>
         {cities && <h2 className="cardCities">{cities}</h2>}
         {title && <h3 className="cardTitle">{title}</h3>}
-
         {description && <p className="cardDescription">{description}</p>}
       </div>
     </div>

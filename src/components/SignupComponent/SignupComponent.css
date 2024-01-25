@@ -3,6 +3,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
+  padding: 30px;
 }
 .signupComponent {
   width: fit-content;
@@ -87,14 +89,18 @@
 .signupComponentNavigatiionToLoginComponent {
   text-align: center;
   position: relative;
+  margin: 10px;
+  font-size: 20px;
 }
-.signupComponentNavigatiionToLoginComponent > button {
+.signupComponentNavigatiionToLoginComponent
+  > .signupComponentNavigatiionToLoginComponentSigninButton {
   color: green;
-  font-size: 15px;
+  font-size: 20px;
   font-weight: 600;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   text-decoration: underline;
   margin-left: 2px;
   letter-spacing: 0.4px;
   letter-spacing: 1px;
+  cursor: pointer;
 }

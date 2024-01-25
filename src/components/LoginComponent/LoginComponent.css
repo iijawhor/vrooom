@@ -2,7 +2,10 @@
   position: relative;
   display: flex;
   align-items: center;
+  flex-direction: column;
   justify-content: center;
+  padding: 20px;
+  margin: auto;
 }
 .signinComponent {
   width: fit-content;
@@ -84,17 +87,26 @@
   background-color: rgb(39, 39, 39);
   transition: 0.3s;
 }
-.signinComponentNavigatiionToLoginComponent {
+.signinComponentNavigationTosigninComponent {
   text-align: center;
   position: relative;
+  margin: auto;
+  color: black;
+  margin-top: 10px;
+  font-size: 20px;
+  letter-spacing: 1px;
 }
-.signinComponentNavigatiionToLoginComponent > button {
-  color: green;
-  font-size: 15px;
+.signinComponentNavigationTosigninComponent > span {
+  color: white;
+  font-size: 16px;
+}
+.signinComponentNavigationTosigninComponent > button {
+  color: rgb(38, 158, 38);
+  font-size: 20px;
   font-weight: 600;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   text-decoration: underline;
   margin-left: 2px;
-  letter-spacing: 0.4px;
-  letter-spacing: 1px;
+  letter-spacing: 0.5px;
+  cursor: pointer;
 }

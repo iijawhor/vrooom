@@ -43,7 +43,7 @@ import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import HowItWorks from "../HowItWorks/HowItWorks";
 import HowItWorksCard from "../HowItWorks/HowItWorksCard/HowItWorksCard";
 import UserFlowPanel from "../UserFlowPanel/UserFlowPanel";
-
+import DisplayMessage from "../DisplayMessage/DisplayMessage";
 export {
   AddIcon,
   RemoveIcon,
@@ -89,5 +89,6 @@ export {
   FooterItems,
   HowItWorks,
   HowItWorksCard,
-  UserFlowPanel
+  UserFlowPanel,
+  DisplayMessage
 };

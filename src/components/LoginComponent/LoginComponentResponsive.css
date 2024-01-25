@@ -25,6 +25,10 @@
     font-weight: 600;
     border: 1px solid gray;
   }
+  .signinComponentNavigationTosigninComponent > span {
+    color: black;
+    font-size: 18px;
+  }
   .signinButtonInsigninComponent {
     background-color: rgb(38, 158, 38);
     color: white;

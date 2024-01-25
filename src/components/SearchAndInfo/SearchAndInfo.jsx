@@ -7,7 +7,6 @@ import {
 } from "../Exports/exports";
 
 function SearchAndInfo() {
-  console.log("Rendering search Component............");
   return (
     <Container className="searchAndInfo">
       <SearchCompoenent />

@@ -1,0 +1,8 @@
+.errorMessageText {
+  font-size: 18px;
+  letter-spacing: 0.3px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: orangered;
+}
+.errorMessage {
+}

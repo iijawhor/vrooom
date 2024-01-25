@@ -42,6 +42,8 @@ import InstagramIcon from "@mui/icons-material/Instagram";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import HowItWorks from "../HowItWorks/HowItWorks";
 import HowItWorksCard from "../HowItWorks/HowItWorksCard/HowItWorksCard";
+import UserFlowPanel from "../UserFlowPanel/UserFlowPanel";
+
 export {
   AddIcon,
   RemoveIcon,
@@ -86,5 +88,6 @@ export {
   footerData,
   FooterItems,
   HowItWorks,
-  HowItWorksCard
+  HowItWorksCard,
+  UserFlowPanel
 };

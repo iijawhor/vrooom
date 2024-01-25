@@ -7,13 +7,16 @@ import {
   FeaturesDisplay,
   AskedQuestion,
   FooterComponent,
-  HowItWorks
+  HowItWorks,
+  UserFlowPanel
 } from "../../components/Exports/exports";
+import HowItWorksPage from "../../pages/HowItWorksPage/HowItWorksPage";
 function HomeComponent() {
   return (
     <Container className="homeComponent">
       <HomeBackground />
       <SearchAndInfo />
+      <HowItWorksPage />
       <FeaturesDisplay />
       <HowItWorks />
       <AskedQuestion />

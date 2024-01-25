@@ -1,36 +1,34 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./LoginComponent.css";
 import "./LoginComponentResponsive.css";
 import {
   Container,
   InputComponent,
   authService,
-  login
+  login,
+  DisplayMessage
 } from "../Exports/exports";
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 function LoginComponent() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [error, setError] = useState("");
-
+  const [errorMessage, setErrorMessage] = useState("");
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const signin = async (data) => {
-    setError("");
+    setErrorMessage("");
     try {
       const session = await authService.signin(data);
       if (session) {
         const userData = await authService.getCurrentUser();
         if (userData) {
-          console.log(userData);
           dispatch(login(userData));
           navigate("/");
         }
       }
     } catch (error) {
-      setError(error);
-      console.log(error);
+      setErrorMessage("Invalid email or Password Please try again...");
     }
   };
 
@@ -39,6 +37,13 @@ function LoginComponent() {
     const data = { email, password };
     signin(data);
   };
+  useEffect(() => {
+    const hideMessage = setTimeout(() => {
+      setErrorMessage("");
+    }, 5000);
+
+    return () => clearTimeout(hideMessage);
+  }, [errorMessage]);
 
   return (
     <Container className="signinComponentContainer">
@@ -61,6 +66,7 @@ function LoginComponent() {
               label="Email Address"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
+              required="required"
             />
           </div>
           <div className="signinComponentInputBox">
@@ -70,16 +76,19 @@ function LoginComponent() {
               type="password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
+              required="required"
             />
           </div>
           <button className="signinButtonInsigninComponent" type="submit">
             Sign In
           </button>
         </form>
-        <p className="signinComponentNavigatiionTosigninComponent">
-          Don't have an account? <button>Sign Up</button>
+        <p className="signinComponentNavigationTosigninComponent">
+          <span>Don't have an account?</span>{" "}
+          <button onClick={() => navigate("/signup-page")}>Sign Up</button>
         </p>
       </div>
+      <DisplayMessage displayMessage={errorMessage} />
     </Container>
   );
 }

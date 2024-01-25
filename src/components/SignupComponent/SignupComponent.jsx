@@ -5,7 +5,8 @@ import {
   Container,
   InputComponent,
   authService,
-  login
+  login,
+  DisplayMessage
 } from "../Exports/exports";
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
@@ -14,7 +15,7 @@ function SignupComponent() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
-
+  const [signupSuccessful, setSignupSuccessfull] = useState("");
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const signup = async (data) => {
@@ -22,11 +23,12 @@ function SignupComponent() {
     try {
       const userData = await authService.createUser(data);
       if (userData) {
+        setSignupSuccessfull("Account is created syccsesfully!");
         dispatch(login(userData));
         navigate("/login");
       }
     } catch (error) {
-      setError(error);
+      setError("Please enter valid credentials...");
     }
   };
 
@@ -37,7 +39,6 @@ function SignupComponent() {
     console.log(email);
     setEmail("");
     setPassword("");
-    console.log(login);
   };
 
   return (
@@ -53,6 +54,15 @@ function SignupComponent() {
               Signup with Facebook
             </button>
           </div>
+          <p className="signupComponentNavigatiionToLoginComponent">
+            Already have an account?{" "}
+            <button
+              className="signupComponentNavigatiionToLoginComponentSigninButton"
+              onClick={() => navigate("/login-page")}
+            >
+              Sign In
+            </button>
+          </p>
         </div>
         <form action="" className="signupComponentForm" onSubmit={handleSignup}>
           <div className="signupComponentInputBox">
@@ -62,6 +72,7 @@ function SignupComponent() {
               type="text"
               value={name}
               onChange={(e) => setName(e.target.value)}
+              required="required"
             />
           </div>
           <div className="signupComponentInputBox">
@@ -70,6 +81,7 @@ function SignupComponent() {
               label="Email Address"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
+              required="required"
             />
           </div>
           <div className="signupComponentInputBox">
@@ -79,16 +91,15 @@ function SignupComponent() {
               type="password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
+              required="required"
             />
           </div>
           <button className="signupButtonInSignupComponent" type="submit">
             Signup
           </button>
         </form>
-        <p className="signupComponentNavigatiionToLoginComponent">
-          Already have an account? <button>Sign In</button>
-        </p>
       </div>
+      {error && <DisplayMessage displayMessage={error} />}
     </Container>
   );
 }

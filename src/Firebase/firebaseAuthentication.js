@@ -18,8 +18,7 @@ export class FirebaseAuthentication {
         this.login({ email, password });
       }
     } catch (error) {
-      console.log("Error in create user method ", error);
-      //   throw error
+      throw error;
     }
   }
 
@@ -27,20 +26,18 @@ export class FirebaseAuthentication {
     try {
       return await signInWithEmailAndPassword(auth, email, password);
     } catch (error) {
-      console.log("Error in singIn method ", error);
-      //   throw error
+      throw error;
     }
   }
-  async signup() {
+  async slogOut() {
     try {
       await signOut(auth);
     } catch (error) {
-      console.log("Error in singOut method ", error);
-      //   throw error
+      throw error;
     }
   }
   async getCurrentUser() {
-    const user = await new Promise((resolve) => {
+    const user = await new Promise((resolve, reject) => {
       const unsubscribe = onAuthStateChanged(
         auth,
         (user) => {
@@ -56,7 +53,7 @@ export class FirebaseAuthentication {
         },
         (error) => {
           console.error("Error fetching user", error);
-          resolve(null); // Resolve with null in case of an error
+          reject(null); // Resolve with null in case of an error
         }
       );
     });

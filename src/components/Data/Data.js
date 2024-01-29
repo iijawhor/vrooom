@@ -1,188 +1,544 @@
 const carBookings = [
   {
     id: 1,
-    carType: "Sedan",
-    currentLocation: "New York",
-    destination: "Los Angeles"
+    currentLocation: "Mumbai",
+    destination: "Delhi",
+    availableVehicles: [
+      {
+        type: "Sedan",
+        description: "A comfortable and spacious sedan.",
+        time: "1 minute"
+      },
+      {
+        type: "SUV",
+        description: "A powerful and versatile SUV.",
+        time: "10 minute"
+      },
+      {
+        type: "Hatchback",
+        description: "A small and agile hatchback.",
+        time: "3 minute"
+      },
+      {
+        type: "Convertible",
+        description: "A stylish convertible for an open-air experience.",
+        time: "20 minute"
+      }
+    ]
   },
-  { id: 2, carType: "SUV", currentLocation: "Chicago", destination: "Miami" },
+  {
+    id: 2,
+    currentLocation: "Bangalore",
+    destination: "Chennai",
+    availableVehicles: [
+      {
+        type: "SUV",
+        description: "A spacious SUV with advanced features.",
+        time: "5 minute"
+      },
+      {
+        type: "Minivan",
+        description: "A family-friendly minivan with ample space.",
+        time: "1 minute"
+      },
+      {
+        type: "Electric",
+        description: "An eco-friendly electric car.",
+        time: "8 minute"
+      },
+      {
+        type: "Convertible",
+        description: "A convertible for a stylish journey.",
+        time: "7 minute"
+      }
+    ]
+  },
   {
     id: 3,
-    carType: "Hatchback",
-    currentLocation: "San Francisco",
-    destination: "Seattle"
+    currentLocation: "Kolkata",
+    destination: "Hyderabad",
+    availableVehicles: [
+      {
+        type: "Hatchback",
+        description: "A compact and fuel-efficient hatchback.",
+        time: "10 minute"
+      },
+      {
+        type: "Electric",
+        description: "An electric car for an eco-conscious ride.",
+        time: "2 minute"
+      },
+      {
+        type: "Sedan",
+        description: "A sleek and comfortable sedan.",
+        time: "11 minute"
+      },
+      {
+        type: "SUV",
+        description: "A versatile and spacious SUV.",
+        time: "4 minute"
+      }
+    ]
   },
   {
     id: 4,
-    carType: "Convertible",
-    currentLocation: "Boston",
-    destination: "New Orleans"
+    currentLocation: "Jaipur",
+    destination: "Lucknow",
+    availableVehicles: [
+      {
+        type: "Convertible",
+        description: "A stylish convertible for an open-air experience.",
+        time: "14 minute"
+      },
+      {
+        type: "Minivan",
+        description: "A family-friendly minivan with ample space.",
+        time: "9 minute"
+      },
+      {
+        type: "Electric",
+        description: "An eco-friendly electric car.",
+        time: "6 minute"
+      },
+      {
+        type: "Sedan",
+        description: "A comfortable and spacious sedan.",
+        time: "3 minute"
+      }
+    ]
   },
   {
     id: 5,
-    carType: "Minivan",
-    currentLocation: "Denver",
-    destination: "Las Vegas"
+    currentLocation: "Ahmedabad",
+    destination: "Pune",
+    availableVehicles: [
+      {
+        type: "Minivan",
+        description: "A family-friendly minivan with ample space.",
+        time: "1 minute"
+      },
+      {
+        type: "Electric",
+        description: "An eco-friendly electric car.",
+        time: "3 minute"
+      },
+      {
+        type: "SUV",
+        description: "A powerful and versatile SUV.",
+        time: "8 minute"
+      },
+      {
+        type: "Convertible",
+        description: "A stylish convertible for an open-air experience.",
+        time: "2 minute"
+      }
+    ]
   },
   {
     id: 6,
-    carType: "Electric",
-    currentLocation: "Portland",
-    destination: "Austin"
+    currentLocation: "Chandigarh",
+    destination: "Coimbatore",
+    availableVehicles: [
+      {
+        type: "Electric",
+        description: "An eco-friendly electric car.",
+        time: "1 minute"
+      },
+      {
+        type: "Hatchback",
+        description: "A small and agile hatchback.",
+        time: "1 minute"
+      },
+      {
+        type: "Sedan",
+        description: "A comfortable and spacious sedan.",
+        time: "1 minute"
+      },
+      {
+        type: "Convertible",
+        description: "A stylish convertible for an open-air experience.",
+        time: "1 minute"
+      }
+    ]
   },
   {
     id: 7,
-    carType: "Sedan",
-    currentLocation: "Philadelphia",
-    destination: "Washington, D.C."
+    currentLocation: "Delhi",
+    destination: "Gurgaon",
+    availableVehicles: [
+      {
+        type: "Sedan",
+        description: "A comfortable and spacious sedan.",
+        time: "1 minute"
+      },
+      {
+        type: "SUV",
+        description: "A powerful and versatile SUV.",
+        time: "1 minute"
+      },
+      {
+        type: "Hatchback",
+        description: "A small and agile hatchback.",
+        time: "1 minute"
+      },
+      {
+        type: "Convertible",
+        description: "A stylish convertible for an open-air experience.",
+        time: "1 minute"
+      }
+    ]
   },
-  { id: 8, carType: "SUV", currentLocation: "Atlanta", destination: "Orlando" },
+  {
+    id: 8,
+    currentLocation: "Mumbai",
+    destination: "Navi Mumbai",
+    availableVehicles: [
+      {
+        type: "SUV",
+        description: "A powerful and versatile SUV.",
+        time: "1 minute"
+      },
+      {
+        type: "Minivan",
+        description: "A family-friendly minivan with ample space.",
+        time: "1 minute"
+      },
+      {
+        type: "Electric",
+        description: "An eco-friendly electric car.",
+        time: "1 minute"
+      },
+      {
+        type: "Convertible",
+        description: "A stylish convertible for an open-air experience.",
+        time: "1 minute"
+      }
+    ]
+  },
   {
     id: 9,
-    carType: "Hatchback",
-    currentLocation: "Detroit",
-    destination: "Minneapolis"
+    currentLocation: "Bangalore",
+    destination: "Mysuru",
+    availableVehicles: [
+      {
+        type: "Hatchback",
+        description: "A compact and fuel-efficient hatchback.",
+        time: "1 minute"
+      },
+      {
+        type: "Electric",
+        description: "An eco-friendly electric car.",
+        time: "1 minute"
+      },
+      {
+        type: "Sedan",
+        description: "A sleek and comfortable sedan.",
+        time: "1 minute"
+      },
+      {
+        type: "SUV",
+        description: "A versatile and spacious SUV.",
+        time: "1 minute"
+      }
+    ]
   },
   {
     id: 10,
-    carType: "Convertible",
-    currentLocation: "Phoenix",
-    destination: "San Diego"
+    currentLocation: "Chennai",
+    destination: "Puducherry",
+    availableVehicles: [
+      {
+        type: "Convertible",
+        description: "A stylish convertible for an open-air experience.",
+        time: "1 minute"
+      },
+      {
+        type: "Minivan",
+        description: "A family-friendly minivan with ample space.",
+        time: "1 minute"
+      },
+      {
+        type: "Electric",
+        description: "An eco-friendly electric car.",
+        time: "1 minute"
+      },
+      {
+        type: "Sedan",
+        description: "A comfortable and spacious sedan.",
+        time: "1 minute"
+      }
+    ]
   },
   {
     id: 11,
-    carType: "Minivan",
-    currentLocation: "Dallas",
-    destination: "Houston"
+    currentLocation: "Hyderabad",
+    destination: "Secunderabad",
+    availableVehicles: [
+      {
+        type: "Minivan",
+        description: "A family-friendly minivan with ample space.",
+        time: "1 minute"
+      },
+      {
+        type: "Electric",
+        description: "An eco-friendly electric car.",
+        time: "1 minute"
+      },
+      {
+        type: "SUV",
+        description: "A powerful and versatile SUV.",
+        time: "1 minute"
+      },
+      {
+        type: "Convertible",
+        description: "A stylish convertible for an open-air experience.",
+        time: "1 minute"
+      }
+    ]
   },
   {
     id: 12,
-    carType: "Electric",
-    currentLocation: "San Jose",
-    destination: "Salt Lake City"
+    currentLocation: "Pune",
+    destination: "Nashik",
+    availableVehicles: [
+      {
+        type: "Electric",
+        description: "An eco-friendly electric car.",
+        time: "1 minute"
+      },
+      {
+        type: "Hatchback",
+        description: "A small and agile hatchback.",
+        time: "1 minute"
+      },
+      {
+        type: "Sedan",
+        description: "A comfortable and spacious sedan.",
+        time: "1 minute"
+      },
+      {
+        type: "Convertible",
+        description: "A stylish convertible for an open-air experience.",
+        time: "1 minute"
+      }
+    ]
   },
   {
     id: 13,
-    carType: "Sedan",
-    currentLocation: "New York",
-    destination: "Boston"
+    currentLocation: "Mumbai",
+    destination: "Ahmedabad",
+    availableVehicles: [
+      {
+        type: "Sedan",
+        description: "A comfortable and spacious sedan.",
+        time: "1 minute"
+      },
+      {
+        type: "SUV",
+        description: "A powerful and versatile SUV.",
+        time: "1 minute"
+      },
+      {
+        type: "Hatchback",
+        description: "A small and agile hatchback.",
+        time: "1 minute"
+      },
+      {
+        type: "Convertible",
+        description: "A stylish convertible for an open-air experience.",
+        time: "1 minute"
+      }
+    ]
   },
   {
     id: 14,
-    carType: "SUV",
-    currentLocation: "Los Angeles",
-    destination: "San Francisco"
+    currentLocation: "Delhi",
+    destination: "Jaipur",
+    availableVehicles: [
+      {
+        type: "SUV",
+        description: "A powerful and versatile SUV.",
+        time: "1 minute"
+      },
+      {
+        type: "Minivan",
+        description: "A family-friendly minivan with ample space.",
+        time: "1 minute"
+      },
+      {
+        type: "Electric",
+        description: "An eco-friendly electric car.",
+        time: "1 minute"
+      },
+      {
+        type: "Convertible",
+        description: "A stylish convertible for an open-air experience.",
+        time: "1 minute"
+      }
+    ]
   },
   {
     id: 15,
-    carType: "Hatchback",
-    currentLocation: "Miami",
-    destination: "Chicago"
+    currentLocation: "Chennai",
+    destination: "Bangalore",
+    availableVehicles: [
+      {
+        type: "Hatchback",
+        description: "A compact and fuel-efficient hatchback.",
+        time: "1 minute"
+      },
+      {
+        type: "Electric",
+        description: "An eco-friendly electric car.",
+        time: "1 minute"
+      },
+      {
+        type: "Sedan",
+        description: "A sleek and comfortable sedan.",
+        time: "1 minute"
+      },
+      {
+        type: "SUV",
+        description: "A versatile and spacious SUV.",
+        time: "1 minute"
+      }
+    ]
   },
   {
     id: 16,
-    carType: "Convertible",
-    currentLocation: "Seattle",
-    destination: "Portland"
+    currentLocation: "Hyderabad",
+    destination: "Vijayawada",
+    availableVehicles: [
+      {
+        type: "Convertible",
+        description: "A stylish convertible for an open-air experience.",
+        time: "1 minute"
+      },
+      {
+        type: "Minivan",
+        description: "A family-friendly minivan with ample space.",
+        time: "1 minute"
+      },
+      {
+        type: "Electric",
+        description: "An eco-friendly electric car.",
+        time: "1 minute"
+      },
+      {
+        type: "Sedan",
+        description: "A comfortable and spacious sedan.",
+        time: "1 minute"
+      }
+    ]
   },
   {
     id: 17,
-    carType: "Minivan",
-    currentLocation: "Las Vegas",
-    destination: "Denver"
+    currentLocation: "Pune",
+    destination: "Mumbai",
+    availableVehicles: [
+      {
+        type: "Minivan",
+        description: "A family-friendly minivan with ample space.",
+        time: "1 minute"
+      },
+      {
+        type: "Electric",
+        description: "An eco-friendly electric car.",
+        time: "1 minute"
+      },
+      {
+        type: "SUV",
+        description: "A powerful and versatile SUV.",
+        time: "1 minute"
+      },
+      {
+        type: "Convertible",
+        description: "A stylish convertible for an open-air experience.",
+        time: "1 minute"
+      }
+    ]
   },
   {
     id: 18,
-    carType: "Electric",
-    currentLocation: "Austin",
-    destination: "Nashville"
+    currentLocation: "Bangalore",
+    destination: "Chennai",
+    availableVehicles: [
+      {
+        type: "Electric",
+        description: "An eco-friendly electric car.",
+        time: "1 minute"
+      },
+      {
+        type: "Hatchback",
+        description: "A small and agile hatchback.",
+        time: "1 minute"
+      },
+      {
+        type: "Sedan",
+        description: "A comfortable and spacious sedan.",
+        time: "1 minute"
+      },
+      {
+        type: "Convertible",
+        description: "A stylish convertible for an open-air experience.",
+        time: "1 minute"
+      }
+    ]
   },
   {
     id: 19,
-    carType: "Sedan",
-    currentLocation: "Atlanta",
-    destination: "Raleigh"
+    currentLocation: "Delhi",
+    destination: "Noida",
+    availableVehicles: [
+      {
+        type: "Sedan",
+        description: "A comfortable and spacious sedan.",
+        time: "1 minute"
+      },
+      {
+        type: "SUV",
+        description: "A powerful and versatile SUV.",
+        time: "1 minute"
+      },
+      {
+        type: "Hatchback",
+        description: "A small and agile hatchback.",
+        time: "1 minute"
+      },
+      {
+        type: "Convertible",
+        description: "A stylish convertible for an open-air experience.",
+        time: "1 minute"
+      }
+    ]
   },
   {
     id: 20,
-    carType: "SUV",
-    currentLocation: "San Diego",
-    destination: "Phoenix"
-  },
-  {
-    id: 21,
-    carType: "Hatchback",
-    currentLocation: "Minneapolis",
-    destination: "Detroit"
-  },
-  {
-    id: 22,
-    carType: "Convertible",
-    currentLocation: "Houston",
-    destination: "Dallas"
-  },
-  {
-    id: 23,
-    carType: "Minivan",
-    currentLocation: "Salt Lake City",
-    destination: "Boise"
-  },
-  {
-    id: 24,
-    carType: "Electric",
-    currentLocation: "New Orleans",
-    destination: "Memphis"
-  },
-  {
-    id: 25,
-    carType: "Sedan",
-    currentLocation: "Washington, D.C.",
-    destination: "Philadelphia"
-  },
-  { id: 26, carType: "SUV", currentLocation: "Orlando", destination: "Tampa" },
-  {
-    id: 27,
-    carType: "Hatchback",
-    currentLocation: "Denver",
-    destination: "Albuquerque"
-  },
-  {
-    id: 28,
-    carType: "Convertible",
-    currentLocation: "San Francisco",
-    destination: "Los Angeles"
-  },
-  {
-    id: 29,
-    carType: "Minivan",
-    currentLocation: "Seattle",
-    destination: "Portland"
-  },
-  {
-    id: 30,
-    carType: "Electric",
-    currentLocation: "Boston",
-    destination: "New York"
+    currentLocation: "Chennai",
+    destination: "Coimbatore",
+    availableVehicles: [
+      {
+        type: "SUV",
+        description: "A powerful and versatile SUV.",
+        time: "1 minute"
+      },
+      {
+        type: "Minivan",
+        description: "A family-friendly minivan with ample space.",
+        time: "1 minute"
+      },
+      {
+        type: "Electric",
+        description: "An eco-friendly electric car.",
+        time: "1 minute"
+      },
+      {
+        type: "Convertible",
+        description: "A stylish convertible for an open-air experience.",
+        time: "1 minute"
+      }
+    ]
   }
 ];
-export default carBookings;
-const footerData = {
-  cabDetails: {
-    categories: [
-      "Book a cab",
-      "Drive with us",
-      "Outstation",
-      "Rental",
-      "Ola Money",
-      "Corporate"
-    ]
-  },
-  companyDetails: {
-    categories: ["About Us", "Contact Us", "Support", "Careers", "Media Centre"]
-  },
-  futureDetails: {
-    categories: ["Ola S1", "Futurefactory", "Electric", "Investor Relations"]
-  }
-};
 
-export { footerData, carBookings };
+export default carBookings;

@@ -1,12 +1,16 @@
-import React, { useState } from "react";
+import React, { Suspense, lazy } from "react";
 import "./SearchResultComponent.css";
 import "./SearchResultComponentResponsive.css";
 import {
   Container,
   InputComponent,
-  SearchNavigationRoute
+  SearchNavigationRoute,
+  LoadingComponent
 } from "../Exports/exports";
 import { useSelector } from "react-redux";
+const SearchResultCard = lazy(() =>
+  import("../SearchResultCard/SearchResultCard")
+);
 function SearchResultComponent() {
   const pickupLocation = useSelector((state) => state.search.pickupLocation);
   const dropLocation = useSelector((state) => state.search.dropLocation);
@@ -49,75 +53,13 @@ function SearchResultComponent() {
           <h2 className="searchResultComponentserchDetailsAvailableRidesTitle">
             Available Rides
           </h2>
-          <div className="availLableRideContianer">
-            <div className="xyz">
-              <div className="availLableRideContianerRide">
-                <img src="https://i.redd.it/0cvi3ot9pn5a1.jpg" alt="carImage" />
-                <p>1 Min</p>
-              </div>
-              <div className="availLableRideContianerRideDetails">
-                <h3>Mini</h3>
-                <p>
-                  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eos,
-                  repudiandae?
-                </p>
-              </div>
-            </div>
-            <div className="xyz">
-              <div className="availLableRideContianerRide">
-                <img src="https://i.redd.it/0cvi3ot9pn5a1.jpg" alt="carImage" />
-                <p>3 Min</p>
-              </div>
-              <div className="availLableRideContianerRideDetails">
-                <h3>Sedan</h3>
-                <p>
-                  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eos,
-                  repudiandae?
-                </p>
-              </div>
-            </div>
-            <div className="xyz">
-              <div className="availLableRideContianerRide">
-                <img src="https://i.redd.it/0cvi3ot9pn5a1.jpg" alt="carImage" />
-                <p>1 min</p>
-              </div>
-              <div className="availLableRideContianerRideDetails">
-                <h3>SUV</h3>
-                <p>
-                  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eos,
-                  repudiandae?
-                </p>
-              </div>
-            </div>
-            <div className="xyz">
-              <div className="availLableRideContianerRide">
-                <img src="https://i.redd.it/0cvi3ot9pn5a1.jpg" alt="carImage" />
-                <p>5 min</p>
-              </div>
-              <div className="availLableRideContianerRideDetails">
-                <h3>SUV Premium</h3>
-                <p>
-                  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eos,
-                  repudiandae?
-                </p>
-              </div>
-            </div>
-            <div className="xyz">
-              <div className="availLableRideContianerRide">
-                <img src="https://i.redd.it/0cvi3ot9pn5a1.jpg" alt="carImage" />
-                <p>2 min</p>
-              </div>
-              <div className="availLableRideContianerRideDetails">
-                <h3>Taxi (Non-AC)</h3>
-                <p>
-                  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eos,
-                  repudiandae?
-                </p>
-              </div>
-            </div>
+          <div className="searchResults">
+            <Suspense fallback={<LoadingComponent />}>
+              <SearchResultCard />
+            </Suspense>
           </div>
           <p className="searchResultLinkToLoginPage">
-            Pleas login to check exact price
+            Please login to check exact price
           </p>
         </div>
       </div>
@@ -129,7 +71,7 @@ function SearchResultComponent() {
         />
         <div className="searchResultComponentContainerBackgroundDescription">
           <h1>Everyday City Commute.</h1>
-          <p>
+          <p className="searchResultComponentContainerBackgroundDescriptionText">
             Affordable A C cab rides at <br /> your door step.
           </p>
           <p className="vroomForWeb">#VrooomForWeb.</p>

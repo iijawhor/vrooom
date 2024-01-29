@@ -1,8 +1,8 @@
-import React, { useState, forwardRef, useEffect, useMemo } from "react";
+import React, { useState, forwardRef, useMemo } from "react";
 
 import "./SearchForm.css";
 import "./SearchFormResponsive.css";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import {
   LocationSearchingIcon,
   InputComponent,
@@ -18,11 +18,9 @@ import { useNavigate } from "react-router-dom";
 const SearchForm = forwardRef(({ placeholder, buttonTitle }, ref) => {
   const [currentLocation, setCurrentLocation] = useState("");
   const [enterDestination, setEnterDestination] = useState("");
-  const [searchDatas, setSearchDatas] = useState([]);
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  const debounce = UseDebounce({ currentLocation, enterDestination }, 200);
-  const filter = useMemo(() => {
+  const filterData = useMemo(() => {
     return carBookings.filter((data) => {
       const pickupLocation = data.currentLocation
         .toLowerCase()
@@ -34,28 +32,20 @@ const SearchForm = forwardRef(({ placeholder, buttonTitle }, ref) => {
     });
   }, [currentLocation, enterDestination]);
 
-  // useEffect(() => {
-  //   if (currentLocation && enterDestination) {
-  //     setSearchResult(filter);
-  //   } else {
-  //     setSearchResult([]);
-  //   }
-  // }, [currentLocation, enterDestination, filter]);
-
-  const handleSearch = (e) => {
-    e.preventDefault();
-
-    if (!currentLocation && !enterDestination) {
-      alert("Please enter something");
-      return;
-    } else if (!currentLocation || !enterDestination) {
-      alert("Please enter both current location and destination");
-      return;
-    }
-    dispatch(searchData(filter));
+  const fetchedData = () => {
+    const filteredData = filterData;
+    dispatch(searchData(filteredData));
     dispatch(pickupLocation(currentLocation));
     dispatch(dropLocation(enterDestination));
-    navigate("/search-page");
+  };
+
+  const debounce = UseDebounce(() => fetchedData(), 6000);
+  const handleSearch = (e) => {
+    e.preventDefault();
+    debounce();
+    if (currentLocation && enterDestination) {
+      navigate("/search-page");
+    }
   };
 
   return (
@@ -66,7 +56,6 @@ const SearchForm = forwardRef(({ placeholder, buttonTitle }, ref) => {
             <div className="currentLocationDot dot" />
             <InputComponent
               placeholder="Current Location"
-              onClick={handleSearch}
               onChange={(e) => setCurrentLocation(e.target.value)}
               value={currentLocation}
               className="searchInput"

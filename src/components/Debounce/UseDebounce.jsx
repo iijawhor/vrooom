@@ -1,19 +1,10 @@
-import React, { useEffect, useState } from "react";
-
-function UseDebounce({ currentLocation, enterDestination }, delay) {
-  const [debounceValue, setDebounceValue] = useState({
-    currentLocation: "",
-    enterDestination: ""
-  });
-
-  useEffect(() => {
-    const debounceHandler = setTimeout(() => {
-      setDebounceValue({ currentLocation, enterDestination });
+const UseDebounce = (callback, delay) => {
+  let timeout;
+  if (timeout) clearTimeout(timeout);
+  return function (...args) {
+    setTimeout(() => {
+      callback();
     }, delay);
-    return () => clearTimeout(debounceHandler);
-  }, [debounceValue, delay]);
-
-  return debounceValue;
-}
-
+  };
+};
 export default UseDebounce;

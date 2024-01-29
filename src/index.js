@@ -1,4 +1,4 @@
-import React from "react";
+import React, { lazy, Suspense } from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
 import App from "./App";
@@ -10,10 +10,14 @@ import {
   SignupComponent,
   AuthLayout,
   DailySearch,
-  OutstationSearch,
-  SearchResultPage
+  OutstationSearch
 } from "./components/Exports/exports";
 import RentalSearch from "./components/Search/RentalSearch/RentalSearch";
+
+const SearchResultComponent = lazy(() =>
+  import("./components/SearchResultComponent/SearchResultComponent")
+);
+
 const root = ReactDOM.createRoot(document.getElementById("root"));
 const createDailySearchElement = () => <DailySearch />;
 const router = createBrowserRouter([
@@ -47,7 +51,17 @@ const router = createBrowserRouter([
     path: "/search-page",
     element: (
       <AuthLayout authentication={true}>
-        <SearchResultPage />
+        <Suspense
+          fallback={
+            <h1 style={{ fontSize: "40px", color: "red" }}>
+              Loading........... Lorem ipsum dolor, sit amet consectetur
+              adipisicing elit. Neque iure non, rem ea dignissimos eum ad
+              incidunt? Earum, suscipit tempora?
+            </h1>
+          }
+        >
+          <SearchResultComponent />
+        </Suspense>
       </AuthLayout>
     )
   }

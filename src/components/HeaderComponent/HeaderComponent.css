@@ -1,0 +1,103 @@
+.headerComponent {
+  position: fixed;
+  z-index: 9;
+  width: 100%;
+  background-color: black;
+  height: 50px;
+  display: flex;
+  border-bottom: 1px solid rgb(62, 62, 62);
+}
+.headerComponentContainer {
+  width: 90%;
+  position: relative;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.logo {
+  font-size: 20px;
+  color: rgb(68, 255, 68);
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+.headerItemContainer {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  width: fit-content;
+}
+
+.headerItems {
+}
+.headerItem,
+.headerAuthenticationOptionAuth,
+.headerAuthenticationOptionsLanguage {
+  color: rgb(198, 198, 198);
+  font-size: 17px;
+  font-family: sans-serif;
+  letter-spacing: 0.6px;
+  cursor: pointer;
+}
+.headerItem:hover {
+  color: rgb(68, 255, 68);
+}
+.headerItemLists {
+  display: flex;
+  align-items: center;
+  position: relative;
+  gap: 30px;
+}
+.headerAuthenticationOptions {
+  display: flex;
+  position: relative;
+  color: rgb(198, 198, 198);
+  align-items: center;
+  width: 20%;
+  justify-content: space-around;
+}
+.headerAuthenticationOptionAuth {
+  font-size: 15px;
+  background-color: white;
+  padding: 5px 10px;
+  color: rgb(18, 154, 18);
+  border-radius: 3px;
+  font-weight: 550;
+}
+.menu {
+  display: none;
+  font-weight: 800;
+  cursor: pointer;
+  font-size: 30px;
+}
+@media screen and (max-width: 920px) {
+  .headerAuthenticationOptions {
+    width: 100px;
+    gap: 10px;
+    width: 25%;
+  }
+}
+@media screen and (max-width: 820px) {
+  .headerItems,
+  .headerAuthenticationOptionsLanguage {
+    display: none;
+  }
+  .headerAuthenticationOptionAuth {
+    font-size: 13px;
+    padding: 3px 10px;
+  }
+  .menu {
+    display: block;
+    color: rgb(68, 255, 68);
+  }
+}
+@media screen and (max-width: 599px) {
+  .headerAuthenticationOptions {
+    width: 30%;
+  }
+}
+@media screen and (max-width: 320px) {
+  .headerAuthenticationOptions {
+    width: 35%;
+  }
+}

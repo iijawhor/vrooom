@@ -10,7 +10,16 @@ function QuestionComponent({ question, answer }) {
         onClick={() => setShowAnser(!showAnswer)}
       >
         <h1 className="questionComponentQuestion">{question}</h1>
-        {showAnswer ? <RemoveIcon /> : <AddIcon />}
+        {showAnswer ? (
+          <RemoveIcon style={{ color: "rgb(42, 211, 42)", fontSize: "25px" }} />
+        ) : (
+          <AddIcon
+            style={{
+              color: "rgb(42, 211, 42)",
+              fontSize: "25px"
+            }}
+          />
+        )}
       </div>
       {showAnswer && <p className="questionComponentAnswer">{answer}</p>}
     </div>

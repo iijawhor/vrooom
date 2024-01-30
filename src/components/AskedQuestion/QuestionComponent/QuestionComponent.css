@@ -3,7 +3,7 @@
   flex-direction: column;
   text-align: start;
   padding: 10px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 .questionComponentheader {
   display: flex;
@@ -11,24 +11,30 @@
   justify-content: space-between;
   margin-bottom: 5px;
   cursor: pointer;
-  color: white;
 }
 .questionComponentQuestion {
   font-size: 20px;
   font-family: "Open Sans", sans-serif;
-  font-weight: 550;
+  font-weight: 400;
   letter-spacing: 0.3px;
-  color: white;
+
+  color: rgb(50, 131, 50);
 }
 .questionComponentAnswer {
   font-size: 16px;
   width: 80%;
   letter-spacing: 0.3px;
-  color: white;
+  color: rgb(72, 72, 72);
   padding: 5px;
   line-height: 3vh;
+  font-family: sans-serif;
+  letter-spacing: 0.5px;
+  font-weight: 400;
 }
 @media screen and (max-width: 920px) {
+  .questionComponentContainer {
+    padding: 5px 10px;
+  }
   .questionComponentQuestion {
     width: 100%;
     font-size: 15px;

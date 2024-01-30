@@ -1,7 +1,7 @@
 .searchComponentNavigation {
   width: fit-content;
   position: relative;
-  background-color: white;
+  background-color: #f8fcfb !important;
 }
 .searchComponentNavigationItems {
   display: flex;
@@ -18,9 +18,11 @@
 
 .searchNavigationRouteButton {
   color: #333;
+  color: rgb(32, 134, 32);
   padding: 0;
   margin: 0;
   font-size: 16px;
+  font-weight: 500;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   cursor: pointer;
 }

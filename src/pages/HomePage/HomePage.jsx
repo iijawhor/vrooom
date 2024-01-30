@@ -3,7 +3,8 @@ import "./HomePage.css";
 import {
   Container,
   HomeComponent,
-  authService
+  authService,
+  HeaderComponent
 } from "../../components/Exports/exports";
 
 function HomePage() {
@@ -24,6 +25,7 @@ function HomePage() {
   }
   return (
     <Container className="homePage">
+      <HeaderComponent />
       <HomeComponent />
     </Container>
   );

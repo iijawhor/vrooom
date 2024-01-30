@@ -43,6 +43,8 @@ import UserFlowPanel from "../UserFlowPanel/UserFlowPanel";
 import DisplayMessage from "../DisplayMessage/DisplayMessage";
 import SearchResultCard from "../SearchResultCard/SearchResultCard";
 import LoadingComponent from "../LoadingComponent/LoadingComponent";
+import HeaderComponent from "../HeaderComponent/HeaderComponent";
+import HeaderMenu from "../HeaderComponent/HeaderMenu/HeaderMenu";
 export {
   AddIcon,
   RemoveIcon,
@@ -88,5 +90,7 @@ export {
   UserFlowPanel,
   DisplayMessage,
   SearchResultCard,
-  LoadingComponent
+  LoadingComponent,
+  HeaderComponent,
+  HeaderMenu
 };

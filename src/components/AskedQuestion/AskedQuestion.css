@@ -7,18 +7,19 @@
 .askedQuestion {
   position: relative;
   width: 70%;
-  background-color: #228b22;
-  border: 1px solid rgb(35, 37, 35);
+  background-color: #f9fff9;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
+    rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
   margin: auto;
   padding: 50px;
-  border-radius: 20px;
+  border-radius: 10px;
 }
 .askedQuestionTitle {
-  color: white;
+  color: rgb(38, 128, 38);
   margin-bottom: 22px;
-  letter-spacing: 0.4px;
+  letter-spacing: 1px;
   margin-bottom: 50px;
-  font-weight: bolder;
+  font-weight: 550;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size: 20px;
 }

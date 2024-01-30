@@ -11,7 +11,6 @@ function HowItWorksCard({
   return (
     <div className={`howItWorksCard ${className}`}>
       <div className="howItWorksCardImageContainer">
-        {" "}
         <img
           src={img}
           alt="cardimage"

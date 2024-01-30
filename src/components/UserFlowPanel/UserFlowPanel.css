@@ -15,7 +15,6 @@
   float: right;
   gap: 20px;
   padding: 30px;
-  margin-right: 50px;
   align-items: center;
 }
 .userFlowPanelTitle {
@@ -26,10 +25,10 @@
   width: fit-content;
 }
 .userFlowPanelLine {
-  border: 1px solid rgb(24, 255, 24);
+  border: 1px solid teal;
   height: 2px;
-  width: 70px;
-  background-color: #4ef037;
+  width: 80px;
+  background-color: teal;
   position: absolute;
   top: 60px;
   left: 45%;
@@ -44,6 +43,8 @@
   background: none;
   height: 300px;
   border: none;
+  margin: auto;
+  padding: 20px !important;
 }
 .userFlowDescriptionClass {
   text-align: center !important;
@@ -66,7 +67,8 @@
   border-bottom-right-radius: 15px;
 }
 .userFlowPanelNavigationButton {
-  background-color: #4ef037;
+  background-color: rgb(18, 178, 18);
+  color: white;
   font-size: 16px;
   letter-spacing: 0.6px;
   cursor: pointer;
@@ -101,6 +103,9 @@
   }
   .userFlowPanelLine {
     display: none;
+  }
+  .userFlowPanelCard {
+    width: 80%;
   }
   .userFlowPanedCards {
     flex-direction: column;

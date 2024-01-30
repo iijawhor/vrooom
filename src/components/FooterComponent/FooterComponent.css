@@ -1,98 +1,144 @@
-.footerComponent {
+.footerContainer {
   position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
 }
-ul > li {
-  color: white;
+h1,
+p,
+div {
+  margin: 0;
+  padding: 0;
 }
 .footer {
-  padding: 0 30px;
-  clip-path: polygon(0 11%, 100% 0%, 100% 100%, 0 100%);
-  background-color: aquamarine;
-  height: 50vh;
-  background-color: black;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  gap: 50px;
-}
-.footerItemsLogo {
-  width: 350px;
-  display: flex;
-  color: white;
   display: flex;
   flex-direction: column;
-  align-items: center;
-}
-.footerItemsLogo > h1 {
-  font-size: 30px;
-  color: white;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  letter-spacing: 1px;
-  color: rgb(9, 234, 9);
-}
-.footerItemsLogo > .footerSocial > ul {
-  display: flex;
   position: relative;
-  gap: 30px;
+  background-color: black;
+  width: 100%;
+  clip-path: polygon(0 11%, 100% 0%, 100% 100%, 0 100%);
+  padding: 50px 20px 10px 20px;
+  align-items: flex-start;
 }
 .footerItems {
-  padding: 10px;
-  height: 250px;
-}
-.footerItems > ul {
-  min-width: 120px;
   display: flex;
-  flex-direction: column;
+  width: fit-content;
+  text-align: start;
+}
+.footerLogo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   position: relative;
-  padding: 20px;
-  gap: 20px;
-}
-.footerItems > ul > .footerItem {
-  font-family: sans-serif;
-  font-size: 15px;
-  letter-spacing: 0.3px;
-}
-
-.footerItemsNewsLetter {
-  color: white;
-  width: 330px;
-  display: flex;
+  width: fit-content;
   flex-direction: column;
 }
-.footerItemNewsletterInput {
-  border: 1px solid rgb(38, 158, 38);
-  padding: 10px 10px;
-  width: 90%;
-  border-radius: 5px;
+.hashtag {
+  color: rgb(68, 255, 68);
+  font-family: sans-serif;
+  letter-spacing: 1px;
+  font-weight: 400;
+  font-size: 14px;
+  margin-top: -15px;
+  margin-left: 30px;
+}
+.footerSocialConnect {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  gap: 20px;
+  font-size: 18px;
+}
+.footerLogo > h1 {
+  font-size: 3.5vh;
+  font-family: Arial, Helvetica, sans-serif;
+  color: rgb(68, 255, 68);
+  letter-spacing: 1px;
+}
+.footerSocialLink {
+  font-size: 25px;
+}
+.footerItems {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  position: relative;
+  gap: 10px;
+  padding: 0;
+}
+.footerItems > li {
+  display: flex;
+  flex-direction: column;
+  color: darkgray;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  letter-spacing: 1px;
+  font-size: 14px;
+  font-weight: 550;
+  text-align: start;
+}
+.footerItemLists {
+  display: flex;
+  position: relative;
+  gap: 50px;
+  align-items: flex-start;
+}
+.footerNewsletter {
+  display: flex;
+  position: relative;
+  gap: 20px;
+  width: 100%;
+  color: rgb(198, 198, 198);
+  align-items: center;
+}
+.footerItemsNewsLetter {
+  width: 60%;
 }
 .footerItemsNewsLetter > p {
-  color: white;
-  font-family: 16px;
-  margin-bottom: 10px;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  color: rgb(198, 198, 198);
+  font-size: 16px;
 }
 .footerSubscribeButton {
-  font-size: 18px;
-  letter-spacing: 0.3px;
+  color: rgb(68, 255, 68);
+  font-size: 14px;
+  width: 100%;
+  border: 1px solid rgb(198, 198, 198);
   margin-top: 10px;
+  padding: 10px;
+  border-radius: 5px;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  color: white;
-  border: 1px solid rgb(38, 158, 38);
-  background-color: rgb(38, 158, 38);
-  width: 100%;
-  padding: 10px;
+  margin-left: 5px;
   cursor: pointer;
+  letter-spacing: 0.5px;
 }
-
-/* @media screen and (max-width: 1000px) {
-  .footer {
-    flex-direction: column;
-  }
-  .footerItems {
+.footerItemNewsletterInput {
+  border: 1px solid rgb(198, 198, 198);
+}
+@media screen and (min-width: 600px) {
+  .footerItemLists {
     width: 100%;
-    border: 1px solid red;
+    justify-content: space-around;
   }
-} */
+
+  .footerNewsletter {
+    justify-content: space-around;
+  }
+  .footerItemsNewsLetter {
+    width: 30%;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .footer {
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    gap: 30px;
+  }
+  .footerItemsNewsLetter {
+    width: 50%;
+  }
+}

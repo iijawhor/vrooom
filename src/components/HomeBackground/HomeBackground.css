@@ -5,7 +5,7 @@
 }
 .homeBackgroundImage {
   width: 100%;
-
+  position: relative;
   height: 50vh;
   overflow: hidden;
   object-fit: cover;
@@ -21,6 +21,7 @@
   left: 27%;
   transform: translate(-50%, -50%);
   z-index: 2;
+  margin-bottom: 5px;
 }
 .homeBackgroundDetails > h2 {
   color: white !important;
@@ -34,11 +35,11 @@
     height: 180px;
   }
   .homeBackgroundDetails {
-    /* position: relative; */
+    width: 100%;
     top: 80%;
-    left: 30%;
+    left: 60%;
   }
   .homeBackgroundDetails > h2 {
-    font-size: 4vh;
+    font-size: 3vh;
   }
 }

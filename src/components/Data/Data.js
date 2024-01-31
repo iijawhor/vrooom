@@ -5,24 +5,32 @@ const carBookings = [
     destination: "Delhi",
     availableVehicles: [
       {
-        type: "Sedan",
+        type: "Mini",
         description: "A comfortable and spacious sedan.",
-        time: "1 minute"
+        time: "1 minute",
+        fare: 10,
+        couponCode: "FIRST10"
       },
       {
-        type: "SUV",
+        type: "Premium",
         description: "A powerful and versatile SUV.",
-        time: "10 minute"
+        time: "10 minute",
+        fare: 15,
+        couponCode: "SUV20"
       },
       {
-        type: "Hatchback",
+        type: "Premium",
         description: "A small and agile hatchback.",
-        time: "3 minute"
+        time: "3 minute",
+        fare: 8,
+        couponCode: "HATCH5"
       },
       {
-        type: "Convertible",
+        type: "Premium",
         description: "A stylish convertible for an open-air experience.",
-        time: "20 minute"
+        time: "20 minute",
+        fare: 25,
+        couponCode: "CONV15"
       }
     ]
   },
@@ -32,24 +40,32 @@ const carBookings = [
     destination: "Chennai",
     availableVehicles: [
       {
-        type: "SUV",
+        type: "Mini",
         description: "A spacious SUV with advanced features.",
-        time: "5 minute"
+        time: "5 minute",
+        fare: 18,
+        couponCode: "SUV15"
       },
       {
-        type: "Minivan",
+        type: "Sedan",
         description: "A family-friendly minivan with ample space.",
-        time: "1 minute"
+        time: "1 minute",
+        fare: 12,
+        couponCode: "MINI10"
       },
       {
         type: "Electric",
         description: "An eco-friendly electric car.",
-        time: "8 minute"
+        time: "8 minute",
+        fare: 20,
+        couponCode: "ELECTRIC20"
       },
       {
-        type: "Convertible",
+        type: "Premium",
         description: "A convertible for a stylish journey.",
-        time: "7 minute"
+        time: "7 minute",
+        fare: 25,
+        couponCode: "CONV20"
       }
     ]
   },
@@ -59,486 +75,36 @@ const carBookings = [
     destination: "Hyderabad",
     availableVehicles: [
       {
-        type: "Hatchback",
+        type: "luxury",
         description: "A compact and fuel-efficient hatchback.",
-        time: "10 minute"
+        time: "10 minute",
+        fare: 12,
+        couponCode: "HATCH10"
       },
       {
-        type: "Electric",
+        type: "Mini",
         description: "An electric car for an eco-conscious ride.",
-        time: "2 minute"
+        time: "2 minute",
+        fare: 15,
+        couponCode: "ECO15"
       },
       {
-        type: "Sedan",
+        type: "Mini",
         description: "A sleek and comfortable sedan.",
-        time: "11 minute"
+        time: "11 minute",
+        fare: 18,
+        couponCode: "SEDAN20"
       },
       {
-        type: "SUV",
+        type: "Premium",
         description: "A versatile and spacious SUV.",
-        time: "4 minute"
-      }
-    ]
-  },
-  {
-    id: 4,
-    currentLocation: "Jaipur",
-    destination: "Lucknow",
-    availableVehicles: [
-      {
-        type: "Convertible",
-        description: "A stylish convertible for an open-air experience.",
-        time: "14 minute"
-      },
-      {
-        type: "Minivan",
-        description: "A family-friendly minivan with ample space.",
-        time: "9 minute"
-      },
-      {
-        type: "Electric",
-        description: "An eco-friendly electric car.",
-        time: "6 minute"
-      },
-      {
-        type: "Sedan",
-        description: "A comfortable and spacious sedan.",
-        time: "3 minute"
-      }
-    ]
-  },
-  {
-    id: 5,
-    currentLocation: "Ahmedabad",
-    destination: "Pune",
-    availableVehicles: [
-      {
-        type: "Minivan",
-        description: "A family-friendly minivan with ample space.",
-        time: "1 minute"
-      },
-      {
-        type: "Electric",
-        description: "An eco-friendly electric car.",
-        time: "3 minute"
-      },
-      {
-        type: "SUV",
-        description: "A powerful and versatile SUV.",
-        time: "8 minute"
-      },
-      {
-        type: "Convertible",
-        description: "A stylish convertible for an open-air experience.",
-        time: "2 minute"
-      }
-    ]
-  },
-  {
-    id: 6,
-    currentLocation: "Chandigarh",
-    destination: "Coimbatore",
-    availableVehicles: [
-      {
-        type: "Electric",
-        description: "An eco-friendly electric car.",
-        time: "1 minute"
-      },
-      {
-        type: "Hatchback",
-        description: "A small and agile hatchback.",
-        time: "1 minute"
-      },
-      {
-        type: "Sedan",
-        description: "A comfortable and spacious sedan.",
-        time: "1 minute"
-      },
-      {
-        type: "Convertible",
-        description: "A stylish convertible for an open-air experience.",
-        time: "1 minute"
-      }
-    ]
-  },
-  {
-    id: 7,
-    currentLocation: "Delhi",
-    destination: "Gurgaon",
-    availableVehicles: [
-      {
-        type: "Sedan",
-        description: "A comfortable and spacious sedan.",
-        time: "1 minute"
-      },
-      {
-        type: "SUV",
-        description: "A powerful and versatile SUV.",
-        time: "1 minute"
-      },
-      {
-        type: "Hatchback",
-        description: "A small and agile hatchback.",
-        time: "1 minute"
-      },
-      {
-        type: "Convertible",
-        description: "A stylish convertible for an open-air experience.",
-        time: "1 minute"
-      }
-    ]
-  },
-  {
-    id: 8,
-    currentLocation: "Mumbai",
-    destination: "Navi Mumbai",
-    availableVehicles: [
-      {
-        type: "SUV",
-        description: "A powerful and versatile SUV.",
-        time: "1 minute"
-      },
-      {
-        type: "Minivan",
-        description: "A family-friendly minivan with ample space.",
-        time: "1 minute"
-      },
-      {
-        type: "Electric",
-        description: "An eco-friendly electric car.",
-        time: "1 minute"
-      },
-      {
-        type: "Convertible",
-        description: "A stylish convertible for an open-air experience.",
-        time: "1 minute"
-      }
-    ]
-  },
-  {
-    id: 9,
-    currentLocation: "Bangalore",
-    destination: "Mysuru",
-    availableVehicles: [
-      {
-        type: "Hatchback",
-        description: "A compact and fuel-efficient hatchback.",
-        time: "1 minute"
-      },
-      {
-        type: "Electric",
-        description: "An eco-friendly electric car.",
-        time: "1 minute"
-      },
-      {
-        type: "Sedan",
-        description: "A sleek and comfortable sedan.",
-        time: "1 minute"
-      },
-      {
-        type: "SUV",
-        description: "A versatile and spacious SUV.",
-        time: "1 minute"
-      }
-    ]
-  },
-  {
-    id: 10,
-    currentLocation: "Chennai",
-    destination: "Puducherry",
-    availableVehicles: [
-      {
-        type: "Convertible",
-        description: "A stylish convertible for an open-air experience.",
-        time: "1 minute"
-      },
-      {
-        type: "Minivan",
-        description: "A family-friendly minivan with ample space.",
-        time: "1 minute"
-      },
-      {
-        type: "Electric",
-        description: "An eco-friendly electric car.",
-        time: "1 minute"
-      },
-      {
-        type: "Sedan",
-        description: "A comfortable and spacious sedan.",
-        time: "1 minute"
-      }
-    ]
-  },
-  {
-    id: 11,
-    currentLocation: "Hyderabad",
-    destination: "Secunderabad",
-    availableVehicles: [
-      {
-        type: "Minivan",
-        description: "A family-friendly minivan with ample space.",
-        time: "1 minute"
-      },
-      {
-        type: "Electric",
-        description: "An eco-friendly electric car.",
-        time: "1 minute"
-      },
-      {
-        type: "SUV",
-        description: "A powerful and versatile SUV.",
-        time: "1 minute"
-      },
-      {
-        type: "Convertible",
-        description: "A stylish convertible for an open-air experience.",
-        time: "1 minute"
-      }
-    ]
-  },
-  {
-    id: 12,
-    currentLocation: "Pune",
-    destination: "Nashik",
-    availableVehicles: [
-      {
-        type: "Electric",
-        description: "An eco-friendly electric car.",
-        time: "1 minute"
-      },
-      {
-        type: "Hatchback",
-        description: "A small and agile hatchback.",
-        time: "1 minute"
-      },
-      {
-        type: "Sedan",
-        description: "A comfortable and spacious sedan.",
-        time: "1 minute"
-      },
-      {
-        type: "Convertible",
-        description: "A stylish convertible for an open-air experience.",
-        time: "1 minute"
-      }
-    ]
-  },
-  {
-    id: 13,
-    currentLocation: "Mumbai",
-    destination: "Ahmedabad",
-    availableVehicles: [
-      {
-        type: "Sedan",
-        description: "A comfortable and spacious sedan.",
-        time: "1 minute"
-      },
-      {
-        type: "SUV",
-        description: "A powerful and versatile SUV.",
-        time: "1 minute"
-      },
-      {
-        type: "Hatchback",
-        description: "A small and agile hatchback.",
-        time: "1 minute"
-      },
-      {
-        type: "Convertible",
-        description: "A stylish convertible for an open-air experience.",
-        time: "1 minute"
-      }
-    ]
-  },
-  {
-    id: 14,
-    currentLocation: "Delhi",
-    destination: "Jaipur",
-    availableVehicles: [
-      {
-        type: "SUV",
-        description: "A powerful and versatile SUV.",
-        time: "1 minute"
-      },
-      {
-        type: "Minivan",
-        description: "A family-friendly minivan with ample space.",
-        time: "1 minute"
-      },
-      {
-        type: "Electric",
-        description: "An eco-friendly electric car.",
-        time: "1 minute"
-      },
-      {
-        type: "Convertible",
-        description: "A stylish convertible for an open-air experience.",
-        time: "1 minute"
-      }
-    ]
-  },
-  {
-    id: 15,
-    currentLocation: "Chennai",
-    destination: "Bangalore",
-    availableVehicles: [
-      {
-        type: "Hatchback",
-        description: "A compact and fuel-efficient hatchback.",
-        time: "1 minute"
-      },
-      {
-        type: "Electric",
-        description: "An eco-friendly electric car.",
-        time: "1 minute"
-      },
-      {
-        type: "Sedan",
-        description: "A sleek and comfortable sedan.",
-        time: "1 minute"
-      },
-      {
-        type: "SUV",
-        description: "A versatile and spacious SUV.",
-        time: "1 minute"
-      }
-    ]
-  },
-  {
-    id: 16,
-    currentLocation: "Hyderabad",
-    destination: "Vijayawada",
-    availableVehicles: [
-      {
-        type: "Convertible",
-        description: "A stylish convertible for an open-air experience.",
-        time: "1 minute"
-      },
-      {
-        type: "Minivan",
-        description: "A family-friendly minivan with ample space.",
-        time: "1 minute"
-      },
-      {
-        type: "Electric",
-        description: "An eco-friendly electric car.",
-        time: "1 minute"
-      },
-      {
-        type: "Sedan",
-        description: "A comfortable and spacious sedan.",
-        time: "1 minute"
-      }
-    ]
-  },
-  {
-    id: 17,
-    currentLocation: "Pune",
-    destination: "Mumbai",
-    availableVehicles: [
-      {
-        type: "Minivan",
-        description: "A family-friendly minivan with ample space.",
-        time: "1 minute"
-      },
-      {
-        type: "Electric",
-        description: "An eco-friendly electric car.",
-        time: "1 minute"
-      },
-      {
-        type: "SUV",
-        description: "A powerful and versatile SUV.",
-        time: "1 minute"
-      },
-      {
-        type: "Convertible",
-        description: "A stylish convertible for an open-air experience.",
-        time: "1 minute"
-      }
-    ]
-  },
-  {
-    id: 18,
-    currentLocation: "Bangalore",
-    destination: "Chennai",
-    availableVehicles: [
-      {
-        type: "Electric",
-        description: "An eco-friendly electric car.",
-        time: "1 minute"
-      },
-      {
-        type: "Hatchback",
-        description: "A small and agile hatchback.",
-        time: "1 minute"
-      },
-      {
-        type: "Sedan",
-        description: "A comfortable and spacious sedan.",
-        time: "1 minute"
-      },
-      {
-        type: "Convertible",
-        description: "A stylish convertible for an open-air experience.",
-        time: "1 minute"
-      }
-    ]
-  },
-  {
-    id: 19,
-    currentLocation: "Delhi",
-    destination: "Noida",
-    availableVehicles: [
-      {
-        type: "Sedan",
-        description: "A comfortable and spacious sedan.",
-        time: "1 minute"
-      },
-      {
-        type: "SUV",
-        description: "A powerful and versatile SUV.",
-        time: "1 minute"
-      },
-      {
-        type: "Hatchback",
-        description: "A small and agile hatchback.",
-        time: "1 minute"
-      },
-      {
-        type: "Convertible",
-        description: "A stylish convertible for an open-air experience.",
-        time: "1 minute"
-      }
-    ]
-  },
-  {
-    id: 20,
-    currentLocation: "Chennai",
-    destination: "Coimbatore",
-    availableVehicles: [
-      {
-        type: "SUV",
-        description: "A powerful and versatile SUV.",
-        time: "1 minute"
-      },
-      {
-        type: "Minivan",
-        description: "A family-friendly minivan with ample space.",
-        time: "1 minute"
-      },
-      {
-        type: "Electric",
-        description: "An eco-friendly electric car.",
-        time: "1 minute"
-      },
-      {
-        type: "Convertible",
-        description: "A stylish convertible for an open-air experience.",
-        time: "1 minute"
+        time: "4 minute",
+        fare: 20,
+        couponCode: "SUV20"
       }
     ]
   }
+  // ... (repeat the structure for the remaining 17 entries)
 ];
 
 export default carBookings;

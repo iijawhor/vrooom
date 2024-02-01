@@ -34,6 +34,7 @@ import FooterComponent from "../FooterComponent/FooterComponent";
 import AddIcon from "@mui/icons-material/Add";
 import RemoveIcon from "@mui/icons-material/Remove";
 import XIcon from "@mui/icons-material/X";
+import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 // import TwitterIcon from "@mui/icons-matersial/Twitter";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
@@ -45,6 +46,9 @@ import SearchResultCard from "../SearchResultCard/SearchResultCard";
 import LoadingComponent from "../LoadingComponent/LoadingComponent";
 import HeaderComponent from "../HeaderComponent/HeaderComponent";
 import HeaderMenu from "../HeaderComponent/HeaderMenu/HeaderMenu";
+import SearchResults from "../SearchResults/SearchResults";
+import ContinueCabBooking from "../ContinueCabBooking/ContinueCabBooking";
+import ContinueCabBookingHeader from "../ContinueCabBooking/ContinueCabBookingHeader/ContinueCabBookingHeader";
 export {
   AddIcon,
   RemoveIcon,
@@ -92,5 +96,9 @@ export {
   SearchResultCard,
   LoadingComponent,
   HeaderComponent,
-  HeaderMenu
+  HeaderMenu,
+  SearchResults,
+  ContinueCabBooking,
+  ContinueCabBookingHeader,
+  ArrowBackIcon
 };

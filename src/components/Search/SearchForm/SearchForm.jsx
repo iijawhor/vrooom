@@ -44,7 +44,7 @@ const SearchForm = forwardRef(({ placeholder, buttonTitle }, ref) => {
     e.preventDefault();
     debounce();
     if (currentLocation && enterDestination) {
-      navigate("/search-page");
+      navigate("/search-result-component");
     }
   };
 

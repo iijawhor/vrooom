@@ -1,0 +1,24 @@
+.continueCabBookingHeader {
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+  padding: 12px 10px;
+  background-color: black;
+  /* border-radius: 5px; */
+}
+.cabBookingHeaderBackIcon {
+  font-size: 20px !important;
+  color: rgb(153, 153, 153) !important;
+  cursor: pointer;
+}
+.continueCabBookingHeaderItem {
+  font-size: 14px;
+  color: rgb(35, 236, 35);
+  letter-spacing: 1px;
+}
+.continueCabBookingHeaderItemAuth {
+  color: rgb(181, 181, 181);
+  cursor: pointer;
+}

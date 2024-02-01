@@ -10,7 +10,9 @@ import {
   SignupComponent,
   AuthLayout,
   DailySearch,
-  OutstationSearch
+  OutstationSearch,
+  SearchResults,
+  ContinueCabBooking
 } from "./components/Exports/exports";
 import RentalSearch from "./components/Search/RentalSearch/RentalSearch";
 
@@ -48,7 +50,7 @@ const router = createBrowserRouter([
     )
   },
   {
-    path: "/search-page",
+    path: "/search-result-component",
     element: (
       <AuthLayout authentication={true}>
         <Suspense
@@ -63,7 +65,17 @@ const router = createBrowserRouter([
           <SearchResultComponent />
         </Suspense>
       </AuthLayout>
-    )
+    ),
+    children: [
+      {
+        path: "/search-result-component",
+        element: <SearchResults />
+      },
+      {
+        path: "/search-result-component/continue-booking",
+        element: <ContinueCabBooking />
+      }
+    ]
   }
 ]);
 root.render(

@@ -53,16 +53,29 @@
   position: relative;
   color: rgb(198, 198, 198);
   align-items: center;
-  width: 20%;
+  width: fit-content;
+  gap: 10px;
+  min-width: fit-content;
   justify-content: space-around;
 }
 .headerAuthenticationOptionAuth {
   font-size: 15px;
   background-color: white;
+  min-width: fit-content;
   padding: 5px 10px;
   color: rgb(18, 154, 18);
   border-radius: 3px;
   font-weight: 550;
+}
+.accountCircle {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.accountCircleIcon {
+  font-size: 30px !important;
+  cursor: pointer;
+  color: white;
 }
 .menu {
   display: none;
@@ -73,8 +86,7 @@
 @media screen and (max-width: 920px) {
   .headerAuthenticationOptions {
     width: 100px;
-    gap: 10px;
-    width: 25%;
+    gap: 3px;
   }
 }
 @media screen and (max-width: 820px) {

@@ -49,7 +49,7 @@ const ContinueCabBooking = () => {
         </div>
       </div>
       <div className="continueCabBookingButton">
-        <button>Continue</button>
+        <button>Confirm & Book</button>
       </div>
     </div>
   );

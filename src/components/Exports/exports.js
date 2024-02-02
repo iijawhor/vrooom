@@ -49,7 +49,16 @@ import HeaderMenu from "../HeaderComponent/HeaderMenu/HeaderMenu";
 import SearchResults from "../SearchResults/SearchResults";
 import ContinueCabBooking from "../ContinueCabBooking/ContinueCabBooking";
 import ContinueCabBookingHeader from "../ContinueCabBooking/ContinueCabBookingHeader/ContinueCabBookingHeader";
+import AccountCircleIcon from "@mui/icons-material/AccountCircle";
+import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
+import MyTripsComponent from "../MyTripsComponent/MyTripsComponent";
+import UserAccount from "../UserAccount/UserAccount";
+import UserAccountInfo from "../UserAccount/UserAccountInfo/UserAccountInfo";
+import DriveEtaIcon from "@mui/icons-material/DriveEta";
+import HomeTwoToneIcon from "@mui/icons-material/HomeTwoTone";
 export {
+  HomeTwoToneIcon,
+  DriveEtaIcon,
   AddIcon,
   RemoveIcon,
   XIcon,
@@ -100,5 +109,10 @@ export {
   SearchResults,
   ContinueCabBooking,
   ContinueCabBookingHeader,
-  ArrowBackIcon
+  ArrowBackIcon,
+  AccountCircleIcon,
+  KeyboardArrowDownIcon,
+  MyTripsComponent,
+  UserAccount,
+  UserAccountInfo
 };

@@ -12,7 +12,10 @@ import {
   DailySearch,
   OutstationSearch,
   SearchResults,
-  ContinueCabBooking
+  ContinueCabBooking,
+  MyTripsComponent,
+  UserAccount,
+  UserAccountInfo
 } from "./components/Exports/exports";
 import RentalSearch from "./components/Search/RentalSearch/RentalSearch";
 
@@ -21,14 +24,14 @@ const SearchResultComponent = lazy(() =>
 );
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
-const createDailySearchElement = () => <DailySearch />;
+
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
     children: [
-      { path: "/", element: createDailySearchElement() },
-      { path: "search/daily-search", element: createDailySearchElement() },
+      { path: "/", element: <DailySearch /> },
+      { path: "search/daily-search", element: <DailySearch /> },
       { path: "search/rental-search", element: <RentalSearch /> },
       { path: "search/outstation-search", element: <OutstationSearch /> }
     ]
@@ -48,6 +51,35 @@ const router = createBrowserRouter([
         <LoginComponent />
       </AuthLayout>
     )
+  },
+  {
+    path: "/my-trips",
+    element: (
+      <AuthLayout authentication={true}>
+        <MyTripsComponent />
+      </AuthLayout>
+    )
+  },
+  {
+    path: "/user-account",
+    element: (
+      <AuthLayout>
+        <UserAccount />
+      </AuthLayout>
+    ),
+    children: [
+      { path: "/user-account", element: <UserAccountInfo /> },
+      { path: "/user-account/user-account-info", element: <UserAccountInfo /> },
+      { path: "/user-account/my-trips", element: <MyTripsComponent /> },
+      {
+        path: "/user-account/user-account-security",
+        element: <p>User Account Security</p>
+      },
+      {
+        path: "/user-account/user-account-data-access",
+        element: <p>User Account Data Access</p>
+      }
+    ]
   },
   {
     path: "/search-result-component",

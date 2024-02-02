@@ -1,0 +1,108 @@
+.MyTripsComponentContainer {
+  padding: 0;
+}
+.myTripComponentHeader {
+  height: 50px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid rgb(213, 213, 213);
+  justify-content: space-between;
+  background-color: none;
+  border-radius: 10px;
+  background-color: black;
+}
+.MyTripsComponent {
+  width: 100%;
+  position: relative;
+  margin: auto;
+  margin-top: 20px;
+  border: 1px solid rgb(222, 222, 222);
+  border-radius: 10px;
+}
+.MyTripsComponentHeaderLeftNavigations {
+  display: flex;
+  position: relative;
+  gap: 10px;
+  margin-left: 10px;
+}
+.MyTripsComponentHeaderLeftNavigationLink {
+  color: black;
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 1px;
+  border: 1px solid darkgray;
+  cursor: pointer;
+  background-color: black;
+  padding: 3px 10px;
+  text-align: center;
+  border-radius: 5px;
+  color: white;
+  width: 80px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+.MyTripsComponentHeaderLeftNavigationLink:hover {
+  color: rgb(21, 255, 21);
+  border: 1px solid rgb(21, 255, 21);
+}
+.myTripsComponentLogo {
+  color: rgb(20, 255, 20);
+  font-size: 25px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  letter-spacing: 1px;
+}
+.MyTripsComponentHeaderRight {
+  color: white;
+  margin-right: 100px;
+  width: fit-content;
+  display: flex;
+}
+.AccountCircleIcon {
+  color: white;
+  font-size: 30px !important;
+}
+.accountDropdownIcon {
+  font-size: 30px !important;
+  color: rgb(8, 255, 8);
+}
+.myTripsComponentBookNowButton {
+  padding: 7px 15px;
+  cursor: pointer;
+  font-size: 16px;
+  letter-spacing: 1px;
+  font-weight: 400;
+  background-color: #000000;
+  border-radius: 20px;
+  color: white;
+  border: 2px solid black;
+}
+.myTripsComponentBookNowButton:hover {
+  color: rgb(1, 255, 1);
+  border: 2px solid rgb(1, 255, 1);
+}
+.MyTripsComponentRidesDetails {
+  width: 100%;
+}
+.MyTripsComponentRidesDetails > img {
+  min-width: 100%;
+  max-height: 220px;
+  background-position: center;
+  background-size: cover;
+  object-fit: cover;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+.MyTripsComponentRidesDetailContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 0 10px 10px 10px;
+}
+.MyTripsComponentRidesDetailContainerTexts > p {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 18px;
+  letter-spacing: 0.5px;
+  font-weight: bold;
+}
